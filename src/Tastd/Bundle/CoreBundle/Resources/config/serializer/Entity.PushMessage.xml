@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\PushMessage" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN,EDIT" />
+        <property name="seen" expose="true" groups="MIN,EDIT" />
+        <property name="notification" type="Tastd\Bundle\CoreBundle\Entity\Notification" expose="true" groups="MIN" />
+    </class>
+</serializer>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Tastd\Bundle\CoreBundle\Entity\Message">
+
+        <!-- CONTENT -->
+        <property name="content">
+            <constraint name="NotNull">
+                <option name="message">validators.invite.content.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- TITLE -->
+        <property name="title">
+            <constraint name="NotNull">
+                <option name="message">validators.invite.title.not_null</option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">2</option>
+                <option name="max">100</option>
+                <option name="minMessage">validators.invite.title.length.min</option>
+                <option name="maxMessage">validators.invite.title.length.max</option>
+            </constraint>
+        </property>
+
+        <!-- CATEGORY -->
+        <property name="category">
+            <constraint name="NotNull">
+                <option name="message">validators.invite.category.not_null</option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">20</option>
+                <option name="minMessage">validators.invite.category.length.min</option>
+                <option name="maxMessage">validators.invite.category.length.max</option>
+            </constraint>
+        </property>
+
+    </class>
+</constraint-mapping>

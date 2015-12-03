@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Notification" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN" />
+        <property name="content" expose="true" groups="MIN" type="array" />
+        <property name="name" max-depth="3" expose="true" groups="MIN" />
+        <property name="created" expose="true" groups="MIN" />
+    </class>
+</serializer>

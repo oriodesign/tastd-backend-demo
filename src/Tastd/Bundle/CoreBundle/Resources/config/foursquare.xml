@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- FOURSQUARE CLIENT -->
+        <service id="tastd.foursquare_client" class="Tastd\Bundle\CoreBundle\Foursquare\FoursquareClient">
+            <argument type="service" id="jcroll_foursquare_client" />
+        </service>
+
+        <!-- VENUE MANAGER -->
+        <service id="tastd.foursquare_venue_manager" class="Tastd\Bundle\CoreBundle\Foursquare\VenueManager">
+            <argument type="service" id="tastd.cuisine_repository" />
+            <argument type="service" id="tastd.geoname_repository" />
+        </service>
+
+    </services>
+</container>

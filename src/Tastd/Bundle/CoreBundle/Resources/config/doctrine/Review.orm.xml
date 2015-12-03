@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\Review"
+            table="reviews"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\ReviewRepository">
+
+        <unique-constraints>
+            <unique-constraint columns="user_id,restaurant_id" name="user_restaurant_constraint" />
+        </unique-constraints>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="onPreUpdate"/>
+        </lifecycle-callbacks>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <!-- COST -->
+        <field name="cost" type="integer" nullable="true" />
+        <field name="dollarCost" column="dollar_cost" type="integer" nullable="true" />
+        <field name="drinkCost" type="integer" nullable="true" />
+        <field name="dollarDrinkCost" type="integer" nullable="true" />
+
+        <!-- DESCRIPTION -->
+        <field name="comment" type="text"  nullable="true" />
+        <field name="lastVisited" column="last_visited" type="datetime" nullable="true" />
+        <field name="visitCount" column="visit_count" type="integer" nullable="true" />
+        <field name="mustHave" column="must_have" type="string" length="30" nullable="true" />
+        <field name="place" type="string" length="30" nullable="true" />
+        <field name="dressCode" column="dress_code" type="string" length="30" nullable="true" />
+        <field name="discoveredOn" column="discovered_on" type="string" length="30" nullable="true" />
+        <field name="dishes" type="text"  nullable="true" />
+
+        <!-- OTHER -->
+        <field name="created" type="datetime" nullable="true" />
+        <field name="updated" type="datetime" nullable="true" />
+        <field name="position" type="integer" nullable="true" />
+        <field name="score" type="integer" />
+
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Cuisine" field="cuisine" inversed-by="reviews">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Geoname" field="geoname" inversed-by="reviews">
+            <join-column on-delete="CASCADE"/>
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\User" field="user" inversed-by="reviews">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Restaurant" field="restaurant" inversed-by="reviews">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+        <many-to-many target-entity="Tastd\Bundle\CoreBundle\Entity\Tag" field="tags" inversed-by="reviews">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </many-to-many>
+
+        <many-to-many target-entity="Tastd\Bundle\CoreBundle\Entity\User" field="taggedFriends">
+        </many-to-many>
+
+    </entity>
+</doctrine-mapping>

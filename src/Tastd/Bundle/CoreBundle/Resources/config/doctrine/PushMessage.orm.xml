@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\PushMessage"
+            table="push_messages"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\PushMessageRepository">
+
+        <unique-constraints>
+            <unique-constraint columns="user_id,notification_id" name="user_notification_constraint" />
+        </unique-constraints>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+        <field name="seen" type="boolean" />
+
+        <many-to-one field="user" target-entity="Tastd\Bundle\CoreBundle\Entity\User" inversed-by="credentials">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+        <many-to-one field="notification" target-entity="Tastd\Bundle\CoreBundle\Entity\Notification" inversed-by="pushMessages">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+    </entity>
+
+</doctrine-mapping>

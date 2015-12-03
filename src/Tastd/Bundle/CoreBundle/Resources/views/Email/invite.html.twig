@@ -1,0 +1,33 @@
+{% extends "TastdCoreBundle:Email:template.html.twig" %}
+{% block content %}
+
+    <h3 class="color-tastd-green"
+        style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #41a09a !important; font-weight: 500; font-size: 27px; margin: 0 0 15px; padding: 0;">
+        Hello,</h3>
+
+    <h5 class="lead font-weight-bold"
+        style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #465359; font-weight: bold; font-size: 17px; margin: 0 0 15px; padding: 0;">
+        Could you recommend me some good restaurants?</h5>
+
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        You know how much I trust your taste….I want to start following you on Tastd!
+    </p>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Tastd is amazing: you can easily keep track of your favorite restaurants and follow your friends to get their recommendations.<br/>
+        Plus, if many followers like your recommendations (as I do!) you will become a recognized food guru!
+    </p>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Download the app using my link: <a href="https://tastdapp.com/invite?invite={{ invite.code }}" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #41a09a; margin: 0; padding: 0;">
+            https://tastdapp.com?code={{ invite.code }}
+        </a>
+    </p>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Thank you so much!<br/>
+        {{ invite.user.firstName }}
+    </p>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\GeoTranslation" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN" />
+        <property name="isoLanguage" expose="true" groups="MIN" serialized-name="isoLanguage"/>
+        <property name="alternateName" expose="true" groups="MIN" serialized-name="alternateName"  />
+
+    </class>
+</serializer>

@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- FLAG SERIALIZE LISTENER -->
+        <service id="tastd.flag_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\FlagSerializeListener">
+            <argument>%cloudfront_url%</argument>
+            <argument type="service" id="request_stack" />
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\Flag" format="json" direction="serialization"  />
+        </service>
+
+        <!-- ENABLE CACHE LISTENER
+        <service id="tastd.enable_cache_listener" class="Tastd\Bundle\CoreBundle\Listener\EnableCacheListener">
+            <argument>%enable_cache_headers%</argument>
+            <argument type="service" id="request_stack" />
+            <tag name="kernel.event_listener" event="kernel.response" method="onKernelResponse"  priority="-200" />
+        </service>
+        -->
+
+        <!-- EXCEPTION LISTENER-->
+        <service id="tastd.exception_listener" class="Tastd\Bundle\CoreBundle\Listener\ExceptionListener">
+            <argument>%twig.exception_listener.controller%</argument>
+            <argument type="service" id="logger" />
+            <argument type="service" id="translator" />
+            <tag name="monolog.logger" channel="request" />
+            <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" priority="200" />
+        </service>
+
+        <!-- GEONAME SERIALIZE LISTENER -->
+        <service id="tastd.geoname_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\GeonameSerializeListener">
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\Geoname" format="json" direction="serialization"  />
+        </service>
+
+        <!-- USER SERIALIZE LISTENER -->
+        <service id="tastd.user_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\UserSerializeListener">
+            <argument>%cloudfront_url%</argument>
+            <argument type="service" id="tastd.user_meta_manager" />
+            <argument type="service" id="request_stack" />
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\User" format="json" direction="serialization"  />
+        </service>
+
+        <!-- PHOTO SERIALIZE LISTENER -->
+        <service id="tastd.photo_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\PhotoSerializeListener">
+            <argument>%cloudfront_url%</argument>
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\Photo" format="json" direction="serialization"  />
+        </service>
+
+        <!-- TAG SERIALIZE LISTENER -->
+        <service id="tastd.tag_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\TagSerializeListener">
+            <argument type="service" id="tastd.tag_group_repository" />
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\Tag" format="json" direction="serialization"  />
+        </service>
+
+        <!-- NOTIFICATION SERIALIZE LISTENER -->
+        <service id="tastd.notification_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\NotificationSerializeListener">
+            <argument>%cloudfront_url%</argument>
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\Notification" format="json" direction="serialization"  />
+        </service>
+
+        <!-- RESTAURANT SERIALIZE LISTENER -->
+        <service id="tastd.restaurant_serialize_listener" class="Tastd\Bundle\CoreBundle\Listener\RestaurantSerializeListener">
+            <argument type="service" id="request_stack" />
+            <argument>%cloudfront_url%</argument>
+            <tag name="jms_serializer.event_subscriber" class="Tastd\Bundle\CoreBundle\Entity\Restaurant" format="json" direction="serialization"  />
+        </service>
+
+        <!-- CACHE LISTENER -->
+        <service id="tastd.cache_listener" class="Tastd\Bundle\CoreBundle\Listener\CacheListener">
+            <argument type="service" id="tastd.cache_manager" />
+            <tag name="jms_serializer.event_subscriber" direction="serialization"  />
+        </service>
+
+        <!-- CREATE REVIEW LISTENER -->
+        <service id="tastd.review_create_listener" class="Tastd\Bundle\CoreBundle\Listener\CreateReviewListener">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="tastd.review_repository" />
+            <argument type="service" id="tastd.cuisine_repository" />
+            <argument type="service" id="tastd.wish_repository" />
+            <tag name="kernel.event_listener" event="tastd.review.created" method="onReviewCreated" />
+        </service>
+
+        <!-- CREATE MESSAGE LISTENER -->
+        <service id="tastd.message_create_listener" class="Tastd\Bundle\CoreBundle\Listener\CreateMessageListener">
+            <argument type="service" id="tastd.mailer" />
+            <tag name="kernel.event_listener" event="tastd.message.created" method="onMessageCreated" />
+        </service>
+
+        <!-- CREATE INVITE LISTENER -->
+        <service id="tastd.invite_create_listener" class="Tastd\Bundle\CoreBundle\Listener\CreateInviteListener">
+            <argument type="service" id="tastd.mailer" />
+            <tag name="kernel.event_listener" event="tastd.invite.created" method="onCreateInvite" />
+        </service>
+
+        <!-- CREATE USER LISTENER -->
+        <service id="tastd.user_create_listener" class="Tastd\Bundle\CoreBundle\Listener\CreateUserListener">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="tastd.mailer" />
+            <argument type="service" id="tastd.conversion_repository" />
+            <tag name="kernel.event_listener" event="tastd.user.created" method="onUserCreated" />
+        </service>
+
+        <!-- QUEUE MESSENGER LISTENER -->
+        <service id="tastd.queue_messenger_listener" class="Tastd\Bundle\CoreBundle\Listener\QueueMessengerListener">
+            <argument type="service" id="serializer" />
+            <argument type="service" id="tastd.sqs_client" />
+            <tag name="kernel.event_listener" event="tastd.review.created" method="onReviewCreated" />
+            <tag name="kernel.event_listener" event="tastd.review.updated" method="onReviewUpdated" />
+            <tag name="kernel.event_listener" event="tastd.wish.created" method="onWishCreated" />
+            <tag name="kernel.event_listener" event="tastd.connection.created" method="onConnectionCreated" />
+            <tag name="kernel.event_listener" event="tastd.user.created" method="onUserCreated" />
+        </service>
+
+    </services>
+</container>

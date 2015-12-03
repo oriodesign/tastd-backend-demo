@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Tastd\Bundle\CoreBundle\Entity\Conversion">
+
+        <!-- Unique Constraint -->
+        <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
+            <option name="fields">
+                <value>invite</value>
+                <value>fingerprint</value>
+            </option>
+            <option name="message">validators.conversion.unique_entity</option>
+        </constraint>
+
+        <!-- INVITE -->
+        <property name="invite">
+            <constraint name="NotNull">
+                <option name="message">validators.conversion.invite.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- FINGERPRINT -->
+        <property name="fingerprint">
+            <constraint name="NotBlank">
+                <option name="message">validators.conversion.fingerprint.not_blank</option>
+            </constraint>
+        </property>
+
+    </class>
+</constraint-mapping>

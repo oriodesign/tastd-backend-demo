@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\Wish"
+            table="wishes"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\WishRepository">
+
+        <unique-constraints>
+            <unique-constraint columns="user_id,restaurant_id" name="wish_user_restaurant_constraint" />
+        </unique-constraints>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="onPreUpdate"/>
+        </lifecycle-callbacks>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="created" type="datetime" nullable="true" />
+        <field name="updated" type="datetime" nullable="true" />
+
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Cuisine" field="cuisine" inversed-by="wishes">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Geoname" field="geoname" inversed-by="wishes">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\User" field="user">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Restaurant" field="restaurant">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+    </entity>
+
+</doctrine-mapping>

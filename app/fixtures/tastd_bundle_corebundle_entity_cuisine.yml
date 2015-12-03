@@ -1,0 +1,276 @@
+short_name: tastd_bundle_corebundle_entity_cuisine
+class: Tastd\Bundle\CoreBundle\Entity\Cuisine
+fixtures:
+    chinese:
+        id: 1
+        prettyId: chinese
+        name: Chinese
+        color: c44b7f
+        wishes: {  }
+        reviews: [1]
+    indian:
+        id: 2
+        prettyId: indian
+        name: Indian
+        color: c4416c
+        wishes: {  }
+        reviews: [2]
+    japanese:
+        id: 3
+        prettyId: japanese
+        name: Japanese
+        color: c43658
+        wishes: {  }
+        reviews: [3, 4]
+    sushi:
+        id: 4
+        prettyId: sushi
+        name: Sushi
+        color: c42d47
+        wishes: {  }
+        reviews: {  }
+    thai:
+        id: 5
+        prettyId: thai
+        name: Thai
+        color: be2b3f
+        wishes: {  }
+        reviews: {  }
+    vietnamese:
+        id: 6
+        prettyId: vietnamese
+        name: Vietnamese
+        color: b42b3d
+        wishes: {  }
+        reviews: {  }
+    korean:
+        id: 7
+        prettyId: korean
+        name: Korean
+        color: a42b3d
+        wishes: {  }
+        reviews: {  }
+    other-asian:
+        id: 8
+        prettyId: other-asian
+        name: 'Other Asian'
+        color: 962b3d
+        wishes: {  }
+        reviews: {  }
+    turkish:
+        id: 9
+        prettyId: turkish
+        name: Turkish
+        color: 95333d
+        wishes: {  }
+        reviews: {  }
+    lebanese:
+        id: 10
+        prettyId: lebanese
+        name: Lebanese
+        color: 9a3a3d
+        wishes: {  }
+        reviews: {  }
+    kosher:
+        id: 11
+        prettyId: kosher
+        name: Kosher
+        color: ae4f3d
+        wishes: {  }
+        reviews: {  }
+    other-middle-eastern:
+        id: 12
+        prettyId: other-middle-eastern
+        name: 'Other Middle Eastern'
+        color: c4643c
+        wishes: {  }
+        reviews: {  }
+    african:
+        id: 13
+        prettyId: african
+        name: African
+        color: cf6f3c
+        wishes: {  }
+        reviews: {  }
+    american:
+        id: 14
+        prettyId: american
+        name: American
+        color: db783a
+        wishes: {  }
+        reviews: {  }
+    caribbean:
+        id: 15
+        prettyId: caribbean
+        name: Caribbean
+        color: dc7835
+        wishes: {  }
+        reviews: {  }
+    mexican:
+        id: 16
+        prettyId: mexican
+        name: Mexican
+        color: dc7432
+        wishes: {  }
+        reviews: {  }
+    brazilian:
+        id: 17
+        prettyId: brazilian
+        name: Brazilian
+        color: dc692b
+        wishes: {  }
+        reviews: {  }
+    argentinian:
+        id: 18
+        prettyId: argentinian
+        name: Argentinian
+        color: dc6327
+        wishes: {  }
+        reviews: {  }
+    other-south-american:
+        id: 19
+        prettyId: other-south-american
+        name: 'Other South American'
+        color: d85a23
+        wishes: {  }
+        reviews: {  }
+    north-european:
+        id: 20
+        prettyId: north-european
+        name: 'North European'
+        color: d35823
+        wishes: {  }
+        reviews: {  }
+    east-european:
+        id: 21
+        prettyId: east-european
+        name: 'East European'
+        color: c75d2a
+        wishes: {  }
+        reviews: {  }
+    french:
+        id: 22
+        prettyId: french
+        name: French
+        color: bd6432
+        wishes: {  }
+        reviews: {  }
+    german:
+        id: 23
+        prettyId: german
+        name: German
+        color: af6e3d
+        wishes: {  }
+        reviews: {  }
+    global-international:
+        id: 24
+        prettyId: global-international
+        name: Global/International
+        color: a47545
+        wishes: {  }
+        reviews: {  }
+    greek:
+        id: 25
+        prettyId: greek
+        name: Greek
+        color: '928050'
+        wishes: {  }
+        reviews: {  }
+    italian:
+        id: 26
+        prettyId: italian
+        name: Italian
+        color: '858554'
+        wishes: {  }
+        reviews: {  }
+    mediterranean:
+        id: 27
+        prettyId: mediterranean
+        name: Mediterranean
+        color: 728d56
+        wishes: {  }
+        reviews: {  }
+    spanish:
+        id: 28
+        prettyId: spanish
+        name: Spanish
+        color: 5f9356
+        wishes: {  }
+        reviews: {  }
+    local-traditional:
+        id: 29
+        prettyId: local-traditional
+        name: Local/Traditional
+        color: '4e9757'
+        wishes: {  }
+        reviews: {  }
+    barbecue:
+        id: 30
+        prettyId: barbecue
+        name: Barbecue
+        color: '309960'
+        wishes: {  }
+        reviews: {  }
+    fusion-eclectic:
+        id: 31
+        prettyId: fusion-eclectic
+        name: Fusion/Eclectic
+        color: '279567'
+        wishes: {  }
+        reviews: {  }
+    seafood:
+        id: 32
+        prettyId: seafood
+        name: Seafood
+        color: 1f9170
+        wishes: {  }
+        reviews: {  }
+    steakhouse:
+        id: 33
+        prettyId: steakhouse
+        name: Steakhouse
+        color: 178a7b
+        wishes: {  }
+        reviews: {  }
+    pizza:
+        id: 34
+        prettyId: pizza
+        name: Pizza
+        color: '128385'
+        wishes: {  }
+        reviews: {  }
+    vegan:
+        id: 35
+        prettyId: vegan
+        name: Vegan
+        color: 117b90
+        wishes: {  }
+        reviews: {  }
+    vegetarian:
+        id: 36
+        prettyId: vegetarian
+        name: Vegetarian
+        color: 1b7398
+        wishes: {  }
+        reviews: {  }
+    delicatessen:
+        id: 37
+        prettyId: delicatessen
+        name: Delicatessen
+        color: 4d6a9a
+        wishes: {  }
+        reviews: {  }
+    bakery:
+        id: 38
+        prettyId: bakery
+        name: Bakery
+        color: 5d689a
+        wishes: {  }
+        reviews: {  }
+    pub:
+        id: 39
+        prettyId: pub
+        name: Pub
+        color: 6a69ad
+        wishes: {  }
+        reviews: {  }

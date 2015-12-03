@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Tastd\Bundle\CoreBundle\Entity\Restaurant">
+
+        <!-- Restaurant Distance -->
+        <constraint name="Tastd\Bundle\CoreBundle\Validator\Constraints\RestaurantDistanceConstraint" />
+
+        <!-- Unique Constraint -->
+        <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
+            <option name="fields">
+                <value>lat</value>
+                <value>lng</value>
+                <value>name</value>
+            </option>
+            <option name="message">validators.restaurant.unique_entity</option>
+        </constraint>
+
+        <!-- Name -->
+        <property name="name">
+            <constraint name="Length">
+                <option name="min">3</option>
+                <option name="max">100</option>
+                <option name="minMessage">validators.restaurant.name.length.min</option>
+                <option name="maxMessage">validators.restaurant.name.length.max</option>
+            </constraint>
+            <constraint name="NotBlank">
+                <option name="message">validators.restaurant.name.not_blank</option>
+            </constraint>
+        </property>
+
+        <!-- Address -->
+        <property name="address">
+            <constraint name="NotBlank">
+                <option name="message">validators.restaurant.address.not_blank</option>
+            </constraint>
+        </property>
+
+        <!-- Lat -->
+        <property name="lat">
+            <constraint name="NotBlank">
+                <option name="message">validators.restaurant_address.lat.not_blank</option>
+            </constraint>
+        </property>
+
+        <!-- Lng -->
+        <property name="lng">
+            <constraint name="NotBlank">
+                <option name="message">validators.restaurant_address.lng.not_blank</option>
+            </constraint>
+        </property>
+
+        <!-- Geoname -->
+        <property name="geoname">
+            <constraint name="NotBlank">
+                <option name="message">validators.restaurant_address.geoname.not_blank</option>
+            </constraint>
+        </property>
+
+        <!-- Cuisine -->
+        <property name="cuisine">
+            <constraint name="NotBlank">
+                <option name="message">validators.restaurant.cuisine.not_blank</option>
+            </constraint>
+        </property>
+
+    </class>
+
+</constraint-mapping>

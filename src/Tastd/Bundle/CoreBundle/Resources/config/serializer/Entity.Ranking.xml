@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Ranking" exclusion-policy="all" >
+        <property type="array&lt;Tastd\Bundle\CoreBundle\Entity\Review&gt;" name="reviews" expose="true" groups="MIN,CREATE,EDIT,REORDER" />
+    </class>
+</serializer>

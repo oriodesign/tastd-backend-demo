@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\Cuisine"
+            table="cuisines"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\CuisineRepository">
+
+        <unique-constraints>
+            <unique-constraint columns="pretty_id" name="pretty_id_constraint" />
+        </unique-constraints>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="prettyId" type="string" length="20" column="pretty_id" />
+        <field name="name" type="string" length="30" />
+        <field name="color" type="string" length="6" />
+
+        <one-to-many field="reviews" mapped-by="cuisine" target-entity="Tastd\Bundle\CoreBundle\Entity\Review">
+        </one-to-many>
+
+        <one-to-many field="wishes" mapped-by="cuisine" target-entity="Tastd\Bundle\CoreBundle\Entity\Wish">
+        </one-to-many>
+
+
+    </entity>
+
+</doctrine-mapping>

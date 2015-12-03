@@ -1,0 +1,7 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field%}
+    <div>
+        <img style="display: block; max-width: 120px; max-height: 120px;" class="restaurant-admin-picture" src="{{ object.src | cloudfront }}" />
+    </div>
+{% endblock %}

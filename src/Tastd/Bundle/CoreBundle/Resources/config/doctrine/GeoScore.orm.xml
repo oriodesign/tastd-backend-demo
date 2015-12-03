@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\GeoScore"
+            table="geo_scores"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\GeoScoreRepository">
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="score" type="integer" />
+        <field name="count" type="integer" />
+
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Geoname" field="geoname">
+            <join-column on-delete="CASCADE"/>
+        </many-to-one>
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\User" field="user" inversed-by="geoScores">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+    </entity>
+
+</doctrine-mapping>

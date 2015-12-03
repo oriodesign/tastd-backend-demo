@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\Restaurant"
+            table="restaurants"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\RestaurantRepository">
+
+        <unique-constraints>
+            <unique-constraint columns="lat,lng,name" name="lat_lng_restaurant" />
+        </unique-constraints>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="onPreUpdate"/>
+        </lifecycle-callbacks>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="address" type="string" nullable="true" column="address" length="200"/>
+        <field name="name" type="string" length="100" />
+        <field name="website" type="string" length="200" nullable="true" />
+        <field name="phone" type="string" length="30"  nullable="true" />
+        <field name="instagram" type="string" length="30"  nullable="true" />
+        <field name="chef" type="string" length="50"  nullable="true" />
+        <field name="awards" type="text" nullable="true" />
+        <field name="picture" type="string" length="200" nullable="true" />
+        <field name="thumb" type="string" length="200" nullable="true" />
+        <field name="lat" type="float" nullable="true" />
+        <field name="lng" type="float" nullable="true" />
+        <field name="averageCost" type="integer" column="average_cost" nullable="true" />
+        <field name="created" type="datetime" />
+        <field name="updated" type="datetime" />
+
+        <!-- REVIEWS -->
+        <one-to-many target-entity="Tastd\Bundle\CoreBundle\Entity\Review" mapped-by="restaurant" field="reviews">
+        </one-to-many>
+
+        <!-- PHOTOS -->
+        <one-to-many target-entity="Tastd\Bundle\CoreBundle\Entity\Photo" mapped-by="restaurant" field="photos">
+        </one-to-many>
+
+        <!-- GEONAME -->
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Geoname" field="geoname">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+        <!-- CUISINE -->
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Cuisine" field="cuisine">
+            <join-column nullable="true" on-delete="SET NULL" />
+        </many-to-one>
+
+
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,71 @@
+{% extends "TastdCoreBundle:Email:template.html.twig" %}
+{% block content %}
+
+    <h3 class="color-tastd-green"
+        style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #41a09a !important; font-weight: 500; font-size: 27px; margin: 0 0 15px; padding: 0;">
+        Hello {{ user.firstName }},</h3>
+    <h5 class="lead font-weight-bold"
+        style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #465359; font-weight: bold; font-size: 17px; margin: 0 0 15px; padding: 0;">
+        Welcome to Tastd.</h5>
+
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Discovering great new restaurants is awesome, but there is nothing more disappointing than a bad meal.
+        What we really want is recommendations from the people whose taste we trust – our friends!
+    </p>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Tastd makes getting restaurant recommendations from your friends easy. It’s simple:</p>
+
+    <ul style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        <li class="color-tastd-green"
+            style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #41a09a !important; margin: 0 0 15px 0px; padding: 0; list-style: inside;">
+            <span class="color-oil"
+                  style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #465359 !important; margin: 0; padding: 0;"><strong
+                        style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">Keep
+                    track of your favorite restaurants.</strong>
+                Save your favorite restaurants in one place, add personal tags and rank them according to your taste.</span>
+        </li>
+
+        <li class="color-tastd-green"
+            style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #41a09a !important; margin: 0 0 15px 0px; padding: 0; list-style: inside;">
+            <span class="color-oil"
+                  style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #465359 !important; margin: 0; padding: 0;">
+                <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">Discover favorite restaurants of your trusted friends.</strong>
+                No more emails and unanswered calls…now, if you want to know your friend’s favorite restaurants, just follow them on Tastd and receive recommendations in any city.
+            </span>
+        </li>
+
+        <li class="color-tastd-green"
+            style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #41a09a !important; margin: 0 0 15px 0px; padding: 0; list-style: inside;">
+            <span class="color-oil"
+                  style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #465359 !important; margin: 0; padding: 0;"><strong
+                        style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">Become a recognized food Guru.</strong>
+                Have you ever dreamt of becoming the most influential food critic in your city? Your taste and followers will boost your popularity to make it happen.</span>
+        </li>
+
+    </ul><p
+        style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+    You’re all set. Start building your favorite lists and invite your friends to Tastd.</p>
+
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Thanks for joining us!
+        <br/>
+        <br/>
+        Happy tasting,
+        <br/>
+        <span class="color-tastd-green font-style-italic" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-style: italic; color: #41a09a !important; margin: 0; padding: 0;">
+            The Tastd Team
+        </span>
+    </p>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">PS:</strong>
+        And if you are you the one constantly being asked for recommendations?<br
+                style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"/>Well,
+        Tastd is about to make your life so much easier!</p>
+
+
+
+{% endblock %}

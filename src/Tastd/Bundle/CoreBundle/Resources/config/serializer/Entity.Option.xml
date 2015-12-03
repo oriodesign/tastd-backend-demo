@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Option" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN,CREATE,EDIT" />
+        <property name="name" expose="true" groups="MIN,EDIT,CREATE" />
+        <property name="content" expose="true" type="array" groups="MIN,EDIT,CREATE" />
+    </class>
+</serializer>

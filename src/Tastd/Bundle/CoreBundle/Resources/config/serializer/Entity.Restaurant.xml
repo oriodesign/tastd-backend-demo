@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Restaurant" exclusion-policy="all" >
+        <property name="id" expose="true" groups="RESTAURANT,MIN,EDIT" />
+        <property name="name" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" />
+        <property name="website" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" />
+        <property name="phone" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" />
+        <property name="instagram" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" />
+        <property name="awards" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" />
+        <property name="chef" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" />
+        <property name="picture" expose="true" groups="RESTAURANT,MIN" />
+        <property name="thumb" expose="true" groups="RESTAURANT,MIN" />
+        <property name="uploadedPicture" expose="true" groups="RESTAURANT,EDIT,CREATE" type="string" serialized-name="uploadedPicture" />
+        <property name="created" expose="true" groups="RESTAURANT,FULL" />
+        <property name="updated" expose="true" groups="RESTAURANT,FULL" />
+        <property name="averageCost" expose="true" groups="RESTAURANT,MIN" serialized-name="averageCost" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Cuisine" name="cuisine" expose="true" groups="RESTAURANT,MIN,CREATE" />
+        <property name="lat" expose="true" groups="RESTAURANT,GEOCODE,BASE,CREATE,EDIT"/>
+        <property name="lng" expose="true" groups="RESTAURANT,GEOCODE,BASE,CREATE,EDIT"/>
+        <property name="address" expose="true" groups="RESTAURANT,GEOCODE,MIN,CREATE,EDIT"  serialized-name="address"/>
+        <property type="Tastd\Bundle\CoreBundle\Entity\Geoname" name="geoname" expose="true" groups="RESTAURANT,MIN,GEOCODE,CREATE,EDIT" />
+    </class>
+</serializer>

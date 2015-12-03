@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Connection" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN" />
+        <property name="follower" expose="true" groups="MIN,CREATE,EDIT" />
+        <property name="leader" expose="true" groups="MIN,CREATE,EDIT" />
+        <property name="status" expose="true" groups="MIN,EDIT" />
+        <property name="created" expose="true" groups="FULL" />
+        <property name="updated" expose="true" groups="FULL" />
+    </class>
+</serializer>

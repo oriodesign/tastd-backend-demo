@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="jms_serializer.unserialize_object_constructor.class">Tastd\Bundle\CoreBundle\Serializer\ObjectConstructor</parameter>
+    </parameters>
+
+    <services>
+
+        <!-- CREDENTIAL FACTORY -->
+        <service id="tastd.credential_factory" class="Tastd\Bundle\CoreBundle\Entity\Factory\CredentialFactory">
+            <argument type="service" id="tastd.facebook_client"/>
+        </service>
+
+        <!-- RANDOM CONNECTION FACTORY -->
+        <service id="tastd.random_connection_factory" class="Tastd\Bundle\CoreBundle\Entity\Factory\RandomConnectionFactory">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+
+        <!-- RANDOM REVIEW FACTORY -->
+        <service id="tastd.random_review_factory" class="Tastd\Bundle\CoreBundle\Entity\Factory\RandomReviewFactory">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="tastd.restaurant_repository" />
+            <argument type="service" id="tastd.cuisine_repository" />
+            <argument type="service" id="tastd.tag_repository" />
+            <argument type="service" id="tastd.user_repository" />
+        </service>
+
+        <!-- RANDOM RESTAURANT FACTORY -->
+        <service id="tastd.random_restaurant_factory" class="Tastd\Bundle\CoreBundle\Entity\Factory\RandomRestaurantFactory">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="tastd.cuisine_repository" />
+            <argument type="service" id="tastd.geoname_repository" />
+        </service>
+
+        <!-- RANDOM USER FACTORY -->
+        <service id="tastd.random_user_factory" class="Tastd\Bundle\CoreBundle\Entity\Factory\RandomUserFactory">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+
+        <!-- ADDRESS FACTORY -->
+        <service id="tastd.address_factory" class="Tastd\Bundle\CoreBundle\Entity\Factory\AddressFactory">
+            <argument type="service" id="tastd.geoname_repository" />
+        </service>
+
+    </services>
+
+</container>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\GeoScore" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN" />
+        <property name="score" expose="true" groups="MIN" />
+        <property name="count" expose="true" groups="MIN" />
+        <property name="geoname" expose="true" groups="MIN" />
+    </class>
+</serializer>

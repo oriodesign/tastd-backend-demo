@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Google\Place\PlaceResult" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN"/>
+        <property name="icon" expose="true" groups="MIN"/>
+        <property name="name" expose="true" groups="MIN"/>
+        <property name="picture" expose="true" groups="MIN"/>
+    </class>
+</serializer>

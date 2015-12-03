@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Conversion" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN" />
+    </class>
+</serializer>

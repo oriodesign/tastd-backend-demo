@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- BaseServiceController -->
+        <service id="tastd.controller" class="Tastd\Bundle\CoreBundle\Controller\BaseServiceController">
+            <call method="setRequestStack">
+                <argument type="service" id="request_stack" />
+            </call>
+            <call method="setHttpKernel">
+                <argument type="service" id="http_kernel" />
+            </call>
+            <call method="setSerializer">
+                <argument type="service" id="serializer" />
+            </call>
+            <call method="setEntityManager">
+                <argument type="service" id="doctrine.orm.entity_manager" />
+            </call>
+            <call method="setValidator">
+                <argument type="service" id="validator" />
+            </call>
+            <call method="setDispatcher">
+                <argument type="service" id="event_dispatcher" />
+            </call>
+            <call method="setSecurityContext">
+                <argument type="service" id="security.context" />
+            </call>
+            <call method="setSecurityChecker">
+                <argument type="service" id="tastd.security_checker" />
+            </call>
+            <call method="setCacheManager">
+                <argument type="service" id="tastd.cache_manager" />
+            </call>
+        </service>
+
+        <!-- Api Controller -->
+        <service id="tastd.api_controller" class="Tastd\Bundle\CoreBundle\Controller\ApiController" parent="tastd.controller">
+        </service>
+
+        <!-- Analytics Controller -->
+        <service id="tastd.analytics_controller" class="Tastd\Bundle\CoreBundle\Controller\AnalyticsController" parent="tastd.controller">
+            <argument id="tastd.restaurant_repository" type="service" />
+            <argument id="tastd.user_repository" type="service" />
+            <argument id="tastd.connection_repository" type="service" />
+            <argument id="tastd.cuisine_repository" type="service" />
+            <argument id="tastd.review_repository" type="service" />
+        </service>
+
+        <!-- Auth Controller -->
+        <service id="tastd.auth_controller" class="Tastd\Bundle\CoreBundle\Controller\AuthController" parent="tastd.controller">
+            <argument id="tastd.registration_strategy_chain" type="service" />
+            <argument id="tastd.login_strategy_chain" type="service" />
+            <argument id="tastd.user_manager" type="service" />
+            <argument id="tastd.user_checker" type="service" />
+            <argument id="tastd.mailer" type="service" />
+            <argument id="tastd.facebook_client" type="service" />
+            <argument type="service" id="monolog.logger.auth" />
+        </service>
+
+        <!-- Conversion Controller -->
+        <service id="tastd.conversion_controller" class="Tastd\Bundle\CoreBundle\Controller\ConversionController" parent="tastd.controller">
+            <argument type="service" id="tastd.conversion_repository" />
+            <argument type="service" id="tastd.invite_repository" />
+        </service>
+
+        <!-- Credential Controller -->
+        <service id="tastd.credential_controller" class="Tastd\Bundle\CoreBundle\Controller\CredentialController" parent="tastd.controller">
+            <argument id="tastd.user_repository" type="service" />
+            <argument id="tastd.credential_repository" type="service" />
+            <argument id="tastd.credential_factory" type="service" />
+        </service>
+
+        <!-- Cuisine Controller -->
+        <service id="tastd.cuisine_controller" class="Tastd\Bundle\CoreBundle\Controller\CuisineController" parent="tastd.controller">
+            <argument type="service" id="tastd.cuisine_repository" />
+        </service>
+
+        <!-- Device Controller -->
+        <service id="tastd.device_controller" class="Tastd\Bundle\CoreBundle\Controller\DeviceController" parent="tastd.controller">
+            <argument type="service" id="tastd.device_repository" />
+        </service>
+
+        <!-- Geocode Controller -->
+        <service id="tastd.geocode_controller" class="Tastd\Bundle\CoreBundle\Controller\GeocodeController" parent="tastd.controller">
+            <argument id="tastd.geocoder" type="service" />
+            <argument id="tastd.address_manager" type="service" />
+        </service>
+
+        <!-- Address Controller -->
+        <service id="tastd.address_controller" class="Tastd\Bundle\CoreBundle\Controller\AddressController" parent="tastd.controller">
+        </service>
+
+        <!-- Expertise Controller -->
+        <service id="tastd.expertise_controller" class="Tastd\Bundle\CoreBundle\Controller\ExpertiseController" parent="tastd.controller">
+            <argument id="tastd.review_repository" type="service" />
+            <argument id="tastd.wish_repository" type="service" />
+        </service>
+
+        <!-- Flag Controller -->
+        <service id="tastd.flag_controller" class="Tastd\Bundle\CoreBundle\Controller\FlagController" parent="tastd.controller">
+            <argument id="tastd.flag_repository" type="service" />
+        </service>
+
+        <!-- Friends Controller -->
+        <service id="tastd.friends_controller" class="Tastd\Bundle\CoreBundle\Controller\FriendsController" parent="tastd.controller">
+            <argument id="tastd.facebook_client" type="service" />
+            <argument id="tastd.user_repository" type="service" />
+        </service>
+
+        <!-- Geoname Controller -->
+        <service id="tastd.geoname_controller" class="Tastd\Bundle\CoreBundle\Controller\GeonameController" parent="tastd.controller">
+            <argument id="tastd.geoname_repository" type="service" />
+            <argument id="tastd.reverse_geonamer" type="service"/>
+            <argument id="tastd.user_repository" type="service" />
+        </service>
+
+        <!-- Google Place Controller -->
+        <service id="tastd.google_place_controller" class="Tastd\Bundle\CoreBundle\Controller\GooglePlaceController" parent="tastd.controller">
+            <argument id="tastd.google_place_client" type="service" />
+            <argument id="tastd.geoname_repository" type="service" />
+        </service>
+
+        <!-- Invite Controller -->
+        <service id="tastd.invite_controller" class="Tastd\Bundle\CoreBundle\Controller\InviteController" parent="tastd.controller">
+            <argument id="tastd.facebook_client" type="service" />
+        </service>
+
+        <!-- Leader Controller -->
+        <service id="tastd.leader_controller" class="Tastd\Bundle\CoreBundle\Controller\LeaderController" parent="tastd.controller">
+            <argument id="tastd.user_repository" type="service" />
+        </service>
+
+        <!-- Message Controller -->
+        <service id="tastd.message_controller" class="Tastd\Bundle\CoreBundle\Controller\MessageController" parent="tastd.controller">
+            <argument id="tastd.message_repository" type="service" />
+        </service>
+
+        <!-- Option Controller -->
+        <service id="tastd.option_controller" class="Tastd\Bundle\CoreBundle\Controller\OptionController" parent="tastd.controller">
+            <argument id="tastd.option_repository" type="service" />
+            <argument id="tastd.user_repository" type="service" />
+        </service>
+
+        <!-- Public Api Controller -->
+        <service id="tastd.public_api_controller" class="Tastd\Bundle\CoreBundle\Controller\PublicApiController" parent="tastd.controller">
+            <argument>%tastd_core.client_config%</argument>
+            <argument type="service" id="tastd.cuisine_repository" />
+            <argument type="service" id="tastd.geoname_repository" />
+        </service>
+
+        <!-- Photo Controller -->
+        <service id="tastd.photo_controller" class="Tastd\Bundle\CoreBundle\Controller\PhotoController" parent="tastd.controller">
+            <argument id="tastd.photo_repository" type="service" />
+            <argument id="tastd.s3_client" type="service" />
+        </service>
+
+        <!-- Post Controller -->
+        <service id="tastd.post_controller" class="Tastd\Bundle\CoreBundle\Controller\PostController" parent="tastd.controller">
+            <argument id="tastd.post_repository" type="service" />
+        </service>
+
+        <!-- Push Message Controller -->
+        <service id="tastd.push_message_controller" class="Tastd\Bundle\CoreBundle\Controller\PushMessageController" parent="tastd.controller">
+            <argument id="tastd.push_message_repository" type="service" />
+            <argument id="tastd.push_message_manager" type="service" />
+        </service>
+
+        <!-- Restaurant Controller -->
+        <service id="tastd.restaurant_controller" class="Tastd\Bundle\CoreBundle\Controller\RestaurantController" parent="tastd.controller">
+            <argument id="tastd.restaurant_repository" type="service" />
+            <argument id="tastd.review_repository" type="service" />
+            <argument id="tastd.wish_repository" type="service" />
+            <argument id="tastd.tag_repository" type="service" />
+            <argument id="tastd.photo_repository" type="service" />
+            <argument id="tastd.cuisine_repository" type="service" />
+            <argument id="tastd.s3_client" type="service" />
+        </service>
+
+        <!-- Review Controller -->
+        <service id="tastd.review_controller" class="Tastd\Bundle\CoreBundle\Controller\ReviewController" parent="tastd.controller">
+            <argument id="tastd.review_repository" type="service" />
+            <argument id="tastd.restaurant_repository" type="service" />
+            <argument id="tastd.review_manager" type="service" />
+        </service>
+
+        <!-- Tag Controller -->
+        <service id="tastd.tag_controller" class="Tastd\Bundle\CoreBundle\Controller\TagController" parent="tastd.controller">
+            <argument id="tastd.tag_repository" type="service" />
+        </service>
+
+        <!-- User Controller -->
+        <service id="tastd.user_controller" class="Tastd\Bundle\CoreBundle\Controller\UserController" parent="tastd.controller">
+            <argument id="tastd.user_repository" type="service" />
+            <argument id="tastd.user_manager" type="service" />
+            <argument id="security.encoder_factory" type="service"  />
+            <argument id="tastd.geoname_repository" type="service" />
+            <argument id="tastd.connection_repository" type="service" />
+            <argument id="tastd.s3_client" type="service" />
+        </service>
+
+        <!-- User Credentials Controller -->
+        <service id="tastd.user_credentials_controller" class="Tastd\Bundle\CoreBundle\Controller\UserCredentialsController" parent="tastd.controller">
+            <argument id="tastd.user_repository" type="service" />
+            <argument id="tastd.credential_repository" type="service" />
+            <argument id="tastd.credential_factory" type="service" />
+        </service>
+
+
+        <!-- User Followers Controller -->
+        <service id="tastd.user_followers_controller" class="Tastd\Bundle\CoreBundle\Controller\UserFollowersController" parent="tastd.controller">
+            <argument id="tastd.user_repository" type="service" />
+            <argument id="tastd.connection_repository" type="service" />
+        </service>
+
+        <!-- User Leaders Controller -->
+        <service id="tastd.user_leaders_controller" class="Tastd\Bundle\CoreBundle\Controller\UserLeadersController" parent="tastd.controller">
+            <argument id="tastd.user_repository" type="service" />
+            <argument id="tastd.connection_repository" type="service" />
+        </service>
+
+        <!-- Wish Controller -->
+        <service id="tastd.wish_controller" class="Tastd\Bundle\CoreBundle\Controller\WishController" parent="tastd.controller">
+            <argument id="tastd.wish_repository" type="service" />
+            <argument id="tastd.wish_manager" type="service" />
+        </service>
+
+    </services>
+</container>

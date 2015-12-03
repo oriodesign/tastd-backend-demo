@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Tastd</title>
+
+    <style type="text/css">
+        /* -------------------------------------
+		GLOBAL
+------------------------------------- */
+        * {
+            margin:0;
+            padding:0;
+        }
+        * { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+        img {
+            max-width: 100%;
+        }
+        .collapse {
+            margin:0;
+            padding:0;
+        }
+        .social-links{
+            text-align: center;
+            vertical-align: center;
+        }
+        .social-links a img{
+            border: 0px solid #FFF;
+            padding: 0 8px;
+        }
+        .social-links a{
+            border: 0px solid #FFF;
+        }
+        .green-line-thick{
+            height: 10px;
+            border-radius: 5px;
+            width: 100%;
+            background-color: #41a09a;
+        }
+        .green-line{
+            height: 2px;
+            width: 100%;
+            background-color: #41a09a;
+        }
+        table{
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+        .round-borders{
+            border-radius: 4px;
+        }
+        body {
+            -webkit-font-smoothing:antialiased;
+            -webkit-text-size-adjust:none;
+            width: 100%!important;
+            height: 100%;
+        }
+        .color-tastd-green{
+            color: #41a09a !important;
+        }
+        .color-oil{
+            color: #465359 !important;
+        }
+        .font-style-italic{
+            font-style: italic;
+        }
+        .font-weight-bold{
+            font-weight: bold;
+        }
+        .space-10{
+            height: 10px;
+        }
+        .space-15{
+            height: 15px;
+        }
+        .td-center{
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /* -------------------------------------
+                ELEMENTS
+        ------------------------------------- */
+        a { color: #41a09a;}
+
+        .btn {
+            text-decoration:none;
+            color: #FFF;
+            background-color: #666;
+            padding:10px 16px;
+            font-weight:bold;
+            margin-right:10px;
+            text-align:center;
+            cursor:pointer;
+            display: inline-block;
+        }
+
+        p.callout {
+            padding:15px;
+            background-color:#ECF8FF;
+            margin-bottom: 15px;
+        }
+        .callout a {
+            font-weight:bold;
+            color: #2BA6CB;
+        }
+
+        a.fb { background-color: #3B5998!important; }
+        a.tw { background-color: #1daced!important; }
+        a.gp { background-color: #DB4A39!important; }
+        a.ms { background-color: #000!important; }
+        a.linkedin { background-color: #2386bb!important; }
+
+        .sidebar .soc-btn {
+            display:block;
+            width:100%;
+        }
+
+        /* -------------------------------------
+                HEADER
+        ------------------------------------- */
+        table.head-wrap { width: 100%;}
+
+
+
+        /* -------------------------------------
+                BODY
+        ------------------------------------- */
+        table.body-wrap { width: 100%;}
+
+
+        /* -------------------------------------
+                FOOTER
+        ------------------------------------- */
+        table.footer-wrap { width: 100%;	clear:both!important;
+        }
+        .footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+        .footer-wrap .container td.content p {
+            font-size:10px;
+            font-weight: bold;
+
+        }
+
+
+        /* -------------------------------------
+                TYPOGRAPHY
+        ------------------------------------- */
+        h1,h2,h3,h4,h5,h6 {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#465359;
+        }
+        h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+        h1 { font-weight:200; font-size: 44px;}
+        h2 { font-weight:200; font-size: 37px;}
+        h3 { font-weight:500; font-size: 27px;}
+        h4 { font-weight:500; font-size: 23px;}
+        h5 { font-weight:900; font-size: 17px;}
+        h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+        .collapse { margin:0!important;}
+
+        p, ul {
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-size:14px;
+            line-height:1.4;
+            color: #465359;
+        }
+        p.lead { font-size:17px; }
+        p.last { margin-bottom:0px;}
+
+        ul li {
+            margin-left:0px;
+            list-style-position: inside;
+            margin-bottom: 15px;
+        }
+
+        /* -------------------------------------
+                SIDEBAR
+        ------------------------------------- */
+        ul.sidebar {
+            background:#ebebeb;
+            display:block;
+            list-style-type: none;
+        }
+        ul.sidebar li { display: block; margin:0;}
+        ul.sidebar li a {
+            text-decoration:none;
+            color: #666;
+            padding:10px 16px;
+            /* 	font-weight:bold; */
+            margin-right:10px;
+            /* 	text-align:center; */
+            cursor:pointer;
+            border-bottom: 1px solid #777777;
+            border-top: 1px solid #FFFFFF;
+            display:block;
+            margin:0;
+        }
+        ul.sidebar li a.last { border-bottom-width:0px;}
+        ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
+
+        /* ---------------------------------------------------
+                RESPONSIVENESS
+                Nuke it from orbit. It's the only way to be sure.
+        ------------------------------------------------------ */
+
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        .container {
+            display:block!important;
+            max-width:600px!important;
+            margin:0 auto!important; /* makes it centered */
+            clear:both!important;
+        }
+
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            padding:15px;
+            max-width:600px;
+            margin:0 auto;
+            display:block;
+        }
+
+        /* Let's make sure tables in the content area are 100% wide */
+        .content table { width: 100%; }
+
+
+        /* Odds and ends */
+        .column {
+            width: 300px;
+            float:left;
+        }
+        .column tr td { padding: 15px; }
+        .column-wrap {
+            padding:0!important;
+            margin:0 auto;
+            max-width:600px!important;
+        }
+        .column table { width:100%;}
+
+
+        /* Be sure to place a .clear element after each set of columns, just to be safe */
+        .clear { display: block; clear: both; }
+
+
+        /* -------------------------------------------
+                PHONE
+                For clients that support media queries.
+                Nothing fancy.
+        -------------------------------------------- */
+        @media only screen and (max-width: 600px) {
+
+            a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+            div[class="column"] { width: auto!important; float:none!important;}
+
+
+        }
+    </style>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+<div class="content">
+    <!-- HEADER -->
+    <table class="head-wrap round-borders" bgcolor="#41a09a">
+        <tr>
+            <td></td>
+            <td class="header container">
+
+                <div>
+                    <table width="100%" bgcolor="#41a09a" class="round-borders">
+                        <tr>
+                            <td class="td-center"><img style="color: #FFF;" alt="Tastd" src="https://s3.amazonaws.com/tasted/email/logo.png" /></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </td>
+            <td></td>
+        </tr>
+    </table><!-- /HEADER -->
+
+    <div class="space-15"></div>
+
+    <!-- BODY -->
+    <table class="body-wrap">
+        <tr>
+            <td></td>
+            <td class="container" bgcolor="#FFFFFF">
+
+                <div class="">
+                    <table>
+                        <tr>
+                            <td>
+
+
+
+
+                                <!-- CONTENT START -->
+
+
+
+
+                                <h3 class="color-tastd-green">Hello Fiona,</h3>
+                                <h5 class="lead font-weight-bold">Welcome to Tastd.</h5>
+
+
+                                <p>Discovering great new restaurants is awesome, right? But there is nothing more disappointing than a bad meal. What we want recommendations from the people whose taste we really trust – our friends!</p>
+
+                                <p>Tastd makes getting restaurant recommendations from your friends easy. It’s so simple to use:</p>
+
+                                <ul>
+                                    <li class="color-tastd-green"><span class="color-oil"><strong>Keep track of your favorite restaurants.</strong> Forget business cards and messy notes…save your “favorites” with all their info in one place, add personal tags as reminders and rank them according to your taste.</span></li>
+
+                                    <li class="color-tastd-green"><span class="color-oil"><strong>Discover favorite restaurants of your trusted friends.</strong> No more emails and unanswered calls…now, if you want to know your friend’s favorite restaurants, just follow her on Tastd. In every city, you will find her top picks, which are always up to date.</span></li>
+
+                                    <li class="color-tastd-green"><span class="color-oil"><strong>Become a recognized food Guru.</strong> Have you ever dreamt of becoming the most influential food critic in your city? Your taste and followers will boost your popularity to make it happen.</span></li>
+
+                                </ul>
+
+                                <p>Now you are all set. Start building your favorite lists and invite your friends on Tastd.</p>
+
+
+                                <p>Thanks for joining us!<br/>
+                                    <span class="color-tastd-green font-style-italic">The Tastd Team</span></p>
+
+                                <p><strong>PS:</strong> And if you are you the one constantly being asked for recommendations?<br/>Well, Tastd is about to make your life so much easier!</p>
+
+
+
+
+
+                                <!-- CONTENT END-->
+
+
+                                <!-- SOCIAL BOTTOM -->
+
+                                <div class="space-15"></div>
+
+                                <div class="green-line"></div>
+
+                                <div class="space-15"></div>
+
+
+                                <table class="social-links">
+                                    <tr>
+                                        <td>
+                                            <a href="https://www.facebook.com/tastdapp"><img src="https://s3.amazonaws.com/tasted/email/facebook.png" alt="facebook"></a>
+                                            <a href="https://twitter.com/tastdapp"><img src="https://s3.amazonaws.com/tasted/email/twitter.png" alt="twitter"></a>
+                                            <a href="https://www.linkedin.com/company/6413635"><img src="https://s3.amazonaws.com/tasted/email/linkedin.png" alt="linkedin"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div class="space-15"></div>
+
+
+                                <div class="green-line"></div>
+
+                                <div class="space-15"></div>
+
+                                <p>Contact us at <a href="mailto:info@tastdapp.com">info@tastdapp.com</a></p>
+
+                                <div class="space-15"></div>
+
+                                <div class="green-line-thick"></div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div><!-- /content -->
+
+            </td>
+            <td></td>
+        </tr>
+    </table><!-- /BODY -->
+
+    <!-- FOOTER -->
+    <table class="footer-wrap">
+        <tr>
+            <td></td>
+            <td class="container">
+
+                <!-- content -->
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td align="center">
+                                <p>
+                                    <a href="https://s3.amazonaws.com/tasted/email/tastdapp-terms.pdf">Terms</a> |
+                                    <a href="https://s3.amazonaws.com/tasted/email/tastdapp-privacy.pdf">Privacy</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div><!-- /content -->
+
+            </td>
+            <td></td>
+        </tr>
+    </table><!-- /FOOTER -->
+
+</div><!-- CONTENT -->
+
+</body>
+</html>

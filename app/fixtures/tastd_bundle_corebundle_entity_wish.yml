@@ -1,0 +1,3 @@
+short_name: tastd_bundle_corebundle_entity_wish
+class: Tastd\Bundle\CoreBundle\Entity\Wish
+fixtures: {  }

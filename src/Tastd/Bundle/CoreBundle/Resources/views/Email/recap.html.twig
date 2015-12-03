@@ -1,0 +1,89 @@
+{% extends "TastdCoreBundle:Email:template.html.twig" %}
+{% block content %}
+
+    <h3 class="color-tastd-green"
+        style="font-weight: bold; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #41a09a !important; font-size: 14px; margin: 0 0 15px; padding: 0;">
+        Hello {{ user.firstName }},</h3>
+
+    <h5 class="lead font-weight-bold"
+        style="margin: 10px 0 0 0; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #465359; font-weight: bold; font-size: 14px; padding: 0;">
+        You now have <span style="color: #41a09a;">{{ data.total }} <img src="https://s3.amazonaws.com/tasted/email/crown-16.jpg" /> on Tastd.</span></h5>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 35px; padding: 0;">
+        That makes you number {{ data.position }} in our Gurus' global ranking.
+    </p>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 7px; padding: 0;">
+        Great job last week.
+    </p>
+
+
+    <table style="width: 100%;">
+        <tr>
+            <td style="padding-right:5px; vertical-align: top;">
+                <h3 class="color-tastd-green"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #41a09a !important; font-weight: bold; font-size: 14px; margin: 0 0 5px 0; padding: 0;">
+                    + {{ data.restaurantsScore }} <img src="https://s3.amazonaws.com/tasted/email/crown-16.jpg" /></h3>
+
+                <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+                    because you added {{ data.restaurantsCount }}<br/>new restaurants
+                </p>
+            </td>
+
+
+            <td style="padding-right:5px; vertical-align: top;">
+                <h3 class="color-tastd-green"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #41a09a !important; font-weight: bold; font-size: 14px; margin: 0 0 5px 0; padding: 0;">
+                    + {{ data.followersScore }} <img src="https://s3.amazonaws.com/tasted/email/crown-16.jpg" /></h3>
+                <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+                    because you have {{ data.followersCount }}<br/>new followers
+                </p>
+            </td>
+            <td style="padding-right:5px; vertical-align: top;">
+                <h3 class="color-tastd-green"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #41a09a !important; font-weight: bold; font-size: 14px; margin: 0 0 5px 0; padding: 0;">
+                    + {{ data.sharedScore }} <img src="https://s3.amazonaws.com/tasted/email/crown-16.jpg" /></h3>
+                <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+                    because your followers<br/>loved your recommendations
+                </p>
+            </td>
+
+        </tr>
+    </table>
+
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 15px 0 3px 0; padding: 0;">
+        Do you consider a better guru? It's easy to prove it.
+    </p>
+
+
+    <ul style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        <li class="color-tastd-green"
+            style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #41a09a !important; margin: 0; padding: 0; list-style: inside;">
+            <span class="color-oil"
+                  style="font-weight: bold; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #465359 !important; margin: 0; padding: 0;">
+               Invite more friends. Share your link with your friends: <strong style="color: #41a09a;">http://1ml.co/tastd</strong></span>
+        </li>
+
+        <li class="color-tastd-green"
+            style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #41a09a !important; margin: 0; padding: 0; list-style: inside;">
+            <span class="color-oil"
+                  style="font-weight: bold; font-size: 14px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #465359 !important; margin: 0; padding: 0;">
+                Add more restaurants.</span>
+        </li>
+
+    </ul>
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 30px 0 15px 0; padding: 0;">
+        We'll keep you posted!
+    </p>
+
+
+    <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.4; color: #465359; margin: 0 0 15px; padding: 0;">
+        Best,<br/>
+        <span class="color-tastd-green font-style-italic" style="font-size: 14px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-style: italic; color: #41a09a !important; margin: 0; padding: 0;">
+            The Tastd Team
+        </span>
+    </p>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- ENTITY FORMATTER BAG -->
+        <service id="tastd.entity_formatter_bag" class="Tastd\Bundle\CoreBundle\Entity\Formatter\EntityFormatterBag" />
+
+        <!-- RESTAURANT FORMATTER -->
+        <service id="tastd.restaurant_formatter" class="Tastd\Bundle\CoreBundle\Entity\Formatter\RestaurantFormatter">
+            <tag name="tastd.entity_formatter" />
+        </service>
+
+        <!-- GEONAME FORMATTER -->
+        <service id="tastd.geoname_formatter" class="Tastd\Bundle\CoreBundle\Entity\Formatter\GeonameFormatter">
+            <tag name="tastd.entity_formatter" />
+        </service>
+
+    </services>
+</container>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Tastd\Bundle\CoreBundle\Entity\Wish">
+
+        <!-- Unique Constraint -->
+        <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
+            <option name="fields">
+                <value>user</value>
+                <value>restaurant</value>
+            </option>
+            <option name="message">validators.wish.unique_entity</option>
+        </constraint>
+
+        <!-- RESTAURANT -->
+        <property name="restaurant">
+            <constraint name="NotNull">
+                <option name="message">validators.wish.restaurant.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- GEONAME -->
+        <property name="geoname">
+            <constraint name="NotNull">
+                <option name="message">validators.wish.geoname.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- CUISINE -->
+        <property name="cuisine">
+            <constraint name="NotNull">
+                <option name="message">validators.wish.cuisine.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- USER -->
+        <property name="user">
+            <constraint name="NotNull">
+                <option name="message">validators.wish.user.not_null</option>
+            </constraint>
+        </property>
+
+    </class>
+
+</constraint-mapping>

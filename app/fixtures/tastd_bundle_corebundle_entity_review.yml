@@ -1,0 +1,55 @@
+short_name: tastd_bundle_corebundle_entity_review
+class: Tastd\Bundle\CoreBundle\Entity\Review
+fixtures:
+    1:
+        id: 1
+        user: 1
+        restaurant: 1
+        cuisine: chinese
+        geoname: 6
+        cost: 20
+        comment: 'Lorem ipsum'
+        score: 20
+        position: 1
+        created: '2015-07-13T14:41:42+0200'
+        updated: '2015-07-13T14:41:42+0200'
+        tags: {  }
+    2:
+        id: 2
+        user: 1
+        restaurant: 2
+        cuisine: indian
+        geoname: 6
+        cost: 30
+        comment: 'Lorem ipsum'
+        score: 40
+        position: 2
+        created: '2015-07-13T14:41:42+0200'
+        updated: '2015-07-13T14:41:42+0200'
+        tags: {  }
+    3:
+        id: 3
+        user: 1
+        restaurant: 3
+        cuisine: japanese
+        geoname: 6
+        cost: 10
+        comment: 'Lorem ipsum'
+        score: 10
+        position: 3
+        created: '2015-07-13T14:41:42+0200'
+        updated: '2015-07-13T14:41:42+0200'
+        tags: {  }
+    4:
+        id: 4
+        user: 15
+        restaurant: 1
+        cuisine: japanese
+        geoname: 6
+        cost: 20
+        comment: 'Lorem ipsum'
+        score: 10
+        position: 1
+        created: '2015-07-13T14:41:42+0200'
+        updated: '2015-07-13T14:41:42+0200'
+        tags: {  }

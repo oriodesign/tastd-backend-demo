@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- GEOCODER CURL HTTP ADAPTER-->
+        <service id="tastd.geocoder_curl_http_adapter" class="Geocoder\HttpAdapter\CurlHttpAdapter">
+        </service>
+
+        <!-- GOOGLE MAPS PROVIDER -->
+        <service id="tastd.google_maps_provider" class="Geocoder\Provider\GoogleMapsProvider">
+            <argument type="service" id="tastd.geocoder_curl_http_adapter" />
+            <argument>en</argument>
+            <argument>null</argument>
+            <argument>true</argument>
+            <argument>%google_api_key%</argument>
+        </service>
+
+        <!-- REVERSE GEONAMER-->
+        <service id="tastd.reverse_geonamer" class="Tastd\Bundle\CoreBundle\Google\ReverseGeonamer">
+            <argument type="service" id="tastd.geoname_repository" />
+            <argument type="service" id="tastd.google_maps_provider" />
+        </service>
+
+        <!-- GOOGLE CLIENT -->
+        <service id="tastd.google_client" class="Tastd\Bundle\CoreBundle\Google\GoogleClient">
+            <argument>%google_api_key%</argument>
+            <argument>%google_app_name%</argument>
+        </service>
+
+        <!-- GOOGLE PLACE CLIENT -->
+        <service id="tastd.google_place_client" class="Tastd\Bundle\CoreBundle\Google\GooglePlaceClient">
+            <argument type="service" id="tastd.google_place_result_factory" />
+            <argument type="service" id="tastd.address_factory" />
+            <argument>%google_api_key%</argument>
+            <argument type="service" id="buzz.browser" />
+        </service>
+
+        <!-- PLACE RESULT FACTORY -->
+        <service id="tastd.google_place_result_factory" class="Tastd\Bundle\CoreBundle\Google\Place\PlaceResultFactory">
+            <argument type="service" id="router" />
+        </service>
+
+        <!-- GOOGLE GEOCODER -->
+        <service id="tastd.geocoder" class="Tastd\Bundle\CoreBundle\Google\GeocoderClient">
+            <argument type="service" id="bazinga_geocoder.geocoder" />
+            <argument type="service" id="tastd.address_manager" />
+        </service>
+
+    </services>
+</container>

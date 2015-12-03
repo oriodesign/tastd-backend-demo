@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Review" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN,EDIT,RESTAURANT,REORDER" />
+        <property name="cost" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="dollarCost" serialized-name="dollarCost" expose="true" groups="MIN,RESTAURANT" />
+        <property name="drinkCost" serialized-name="drinkCost" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="dollarDrinkCost" expose="true" groups="MIN,RESTAURANT" />
+
+        <property name="lastVisited" type="DateTime&lt;'Y-m-d'&gt;" serialized-name="lastVisited" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="visitCount" serialized-name="visitCount" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="mustHave" serialized-name="mustHave" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="place" serialized-name="place" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="dressCode" serialized-name="dressCode" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="discoveredOn" serialized-name="discoveredOn" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="dishes" serialized-name="dishes" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+        <property name="comment" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT" />
+
+        <property name="created" expose="true" groups="MIN" />
+        <property name="updated" expose="true" groups="FULL" />
+        <property name="score" expose="true" groups="MIN" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Restaurant" name="restaurant" expose="true" groups="MIN,CREATE" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Cuisine" name="cuisine" expose="true" groups="MIN,EDIT,CREATE,RESTAURANT" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Geoname" name="geoname" expose="true" groups="MIN,CREATE" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\User" name="user" expose="true" groups="RESTAURANT,REVIEW_OWNER" />
+        <property name="position" expose="true" groups="MIN,CREATE,EDIT,RESTAURANT,REORDER" />
+        <property type="array&lt;Tastd\Bundle\CoreBundle\Entity\Photo&gt;" name="photos" expose="true" groups="REVIEW_PHOTOS" />
+        <property type="array&lt;Tastd\Bundle\CoreBundle\Entity\Tag&gt;" name="tags" expose="true" groups="RESTAURANT,CREATE,EDIT,MIN" />
+        <property type="array&lt;Tastd\Bundle\CoreBundle\Entity\User&gt;" name="taggedFriends" serialized-name="taggedFriends" expose="true" groups="RESTAURANT,CREATE,EDIT,MIN" />
+    </class>
+</serializer>

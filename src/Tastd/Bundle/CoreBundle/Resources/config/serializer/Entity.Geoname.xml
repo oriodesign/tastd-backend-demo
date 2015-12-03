@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Geoname" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN,GEOCODE,RESTAURANT" />
+        <property name="asciiName" expose="true" groups="MIN,RESTAURANT" serialized-name="asciiName"  />
+        <property name="formattedName" expose="true" groups="MIN,RESTAURANT" serialized-name="formattedName"  />
+        <property name="currencySymbol" expose="true" groups="MIN,RESTAURANT" serialized-name="currencySymbol"  />
+        <property name="currencyCode" expose="true" groups="BASE,RESTAURANT" serialized-name="currencyCode"  />
+        <property name="lat" expose="true" groups="MIN,GEOCODE,RESTAURANT" />
+        <property name="lng" expose="true" groups="MIN,GEOCODE,RESTAURANT" />
+        <property name="country" expose="true" groups="MIN,GEOCODE,RESTAURANT" />
+        <property name="admin1" expose="true" groups="MIN,GEOCODE" />
+
+        <property name="population" expose="true" groups="BASE" />
+        <property name="timezone" expose="true" groups="BASE" />
+
+
+    </class>
+</serializer>

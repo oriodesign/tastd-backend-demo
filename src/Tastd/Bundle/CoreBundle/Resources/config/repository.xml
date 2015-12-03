@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- CONNECTION REPOSITORY -->
+        <service
+                id="tastd.connection_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\ConnectionRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Connection</argument>
+        </service>
+
+        <!-- CONVERSION REPOSITORY -->
+        <service
+                id="tastd.conversion_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\ConversionRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Conversion</argument>
+        </service>
+
+        <!-- CREDENTIAL REPOSITORY -->
+        <service
+                id="tastd.credential_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\CredentialRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Credential</argument>
+        </service>
+
+        <!-- CUISINE REPOSITORY -->
+        <service
+                id="tastd.cuisine_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\CuisineRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Cuisine</argument>
+        </service>
+
+        <!-- DEVICE REPOSITORY -->
+        <service
+                id="tastd.device_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\DeviceRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Device</argument>
+        </service>
+
+
+        <!-- FLAG REPOSITORY -->
+        <service id="tastd.flag_repository" class="Tastd\Bundle\CoreBundle\Repository\FlagRepository">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
+
+        <!-- GEONAME REPOSITORY -->
+        <service
+                id="tastd.geoname_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\GeonameRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Geoname</argument>
+        </service>
+
+        <!-- GEO TRANSLATION REPOSITORY -->
+        <service
+                id="tastd.geo_translation_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\GeoTranslationRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\GeoTranslation</argument>
+        </service>
+
+        <!-- GEO SCORE REPOSITORY -->
+        <service
+                id="tastd.geo_score_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\GeoScoreRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\GeoScore</argument>
+        </service>
+
+        <!-- INVITE REPOSITORY -->
+        <service
+                id="tastd.invite_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\InviteRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Invite</argument>
+        </service>
+
+        <!-- MESSAGE REPOSITORY -->
+        <service
+                id="tastd.message_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\MessageRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Message</argument>
+        </service>
+
+        <!-- NOTIFICATION REPOSITORY -->
+        <service
+                id="tastd.notification_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\NotificationRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Notification</argument>
+        </service>
+
+        <!-- OPTION REPOSITORY -->
+        <service
+                id="tastd.option_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\OptionRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Option</argument>
+        </service>
+
+        <!-- PHOTO REPOSITORY -->
+        <service
+                id="tastd.photo_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\PhotoRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Photo</argument>
+        </service>
+
+        <!-- POST REPOSITORY -->
+        <service
+                id="tastd.post_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\PostRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Post</argument>
+        </service>
+
+        <!-- PUSH MESSAGE REPOSITORY -->
+        <service
+                id="tastd.push_message_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\PushMessageRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\PushMessage</argument>
+        </service>
+
+        <!-- RESTAURANT REPOSITORY -->
+        <service
+                id="tastd.restaurant_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\RestaurantRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Restaurant</argument>
+        </service>
+
+        <!-- REVIEW REPOSITORY -->
+        <service
+                id="tastd.review_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\ReviewRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Review</argument>
+        </service>
+
+        <!-- TAG REPOSITORY -->
+        <service
+                id="tastd.tag_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\TagRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Tag</argument>
+        </service>
+
+
+        <!-- TAG GROUP REPOSITORY -->
+        <service
+                id="tastd.tag_group_repository"
+                class="Tastd\Bundle\CoreBundle\Repository\TagGroupRepository">
+        </service>
+
+        <!-- USER REPOSITORY -->
+        <service
+                id="tastd.user_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\UserRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\User</argument>
+        </service>
+
+        <!-- WISH REPOSITORY -->
+        <service
+                id="tastd.wish_repository"
+                factory-service="doctrine.orm.default_entity_manager"
+                factory-method="getRepository"
+                class="Tastd\Bundle\CoreBundle\Repository\WishRepository">
+            <argument>Tastd\Bundle\CoreBundle\Entity\Wish</argument>
+        </service>
+
+    </services>
+</container>

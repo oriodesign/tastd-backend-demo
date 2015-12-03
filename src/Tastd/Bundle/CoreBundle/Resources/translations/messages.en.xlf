@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <!-- AUTH -->
+
+            <trans-unit id="exception.auth.already_registered_with_facebook">
+                <source>exception.auth.already_registered_with_facebook</source>
+                <target>You are already registered with Facebook.
+                    Try to login with facebook.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.already_registered_with_email">
+                <source>exception.auth.already_registered_with_email</source>
+                <target>You are already registered with email and password.
+                    Try to login with your email and password.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.auth_token_expired">
+                <source>exception.auth.auth_token_expired</source>
+                <target>Session Expired. Try to login again</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.credential_not_found">
+                <source>exception.auth.credential_not_found</source>
+                <target>Something wrong. Try to login again</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.incomplete_user_profile">
+                <source>exception.auth.incomplete_user_profile</source>
+                <target>Complete your profile before continue</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.invalid_auth_token">
+                <source>exception.auth.invalid_auth_token</source>
+                <target>Something wrong. Try to login again</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.invalid_confirmation_Token">
+                <source>exception.auth.invalid_confirmation_Token</source>
+                <target>Link already used or expired.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.invalid_credential">
+                <source>exception.auth.invalid_credential</source>
+                <target>Something wrong. Try to login again</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.invalid_password">
+                <source>exception.auth.invalid_password</source>
+                <target>Wrong password</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.invalid_refresh_token">
+                <source>exception.auth.invalid_refresh_token</source>
+                <target>Something wrong. Try to login again</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.invalid_registration_type">
+                <source>exception.auth.invalid_registration_type</source>
+                <target>Something wrong. Try to register again.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.missing_auth_token">
+                <source>exception.auth.missing_auth_token</source>
+                <target>Something wrong. </target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.non_unique_user">
+                <source>exception.auth.non_unique_user</source>
+                <target>An user already exist with the same username or email</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.refresh_token_expired">
+                <source>exception.auth.refresh_token_expired</source>
+                <target>Session expired. Login again</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.user_disabled">
+                <source>exception.auth.user_disabled</source>
+                <target>The user has been disabled</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.user_expired">
+                <source>exception.auth.user_expired</source>
+                <target>The user is expired</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.user_locked">
+                <source>exception.auth.user_locked</source>
+                <target>The user has been locked by admin</target>
+            </trans-unit>
+
+            <trans-unit id="exception.auth.user_not_found">
+                <source>exception.auth.user_not_found</source>
+                <target>User not found</target>
+            </trans-unit>
+
+            <!-- FACEBOOK -->
+
+            <trans-unit id="exception.facebook.facebook">
+                <source>exception.facebook.facebook</source>
+                <target>We are having some problem with facebook. Try again later</target>
+            </trans-unit>
+
+
+
+            <!-- GEO -->
+
+            <trans-unit id="exception.geo.unresolved_geoname">
+                <source>exception.geo.unresolved_geoname</source>
+                <target>We can't understand which city is this. Could you write the address in a different way?</target>
+            </trans-unit>
+
+            <!-- GOOGLE -->
+            <trans-unit id="exception.google.google_access_denied">
+                <source>exception.google.google_access_denied</source>
+                <target>We can't access google map. Contact the administrator.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.google.google_quota_exceeded">
+                <source>exception.google.google_quota_exceeded</source>
+                <target>We are having some problem with google map. Contact the administrator.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.google.invalid_google_credential">
+                <source>exception.google.invalid_google_credential</source>
+                <target>We can't access google map. Contact the administrator.</target>
+            </trans-unit>
+
+
+            <!-- HTTP -->
+
+            <trans-unit id="exception.http.bad_request">
+                <source>exception.http.bad_request</source>
+                <target>Bad request</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.address_not_found">
+                <source>exception.http.address_not_found</source>
+                <target>Address not found</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.access_denied">
+                <source>exception.http.access_denied</source>
+                <target>Access Denied</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.connection_not_found">
+                <source>exception.http.connection_not_found</source>
+                <target>Connection not found</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.geoname_not_found">
+                <source>exception.http.geoname_not_found</source>
+                <target>City not found</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.restaurant_not_found">
+                <source>exception.http.restaurant_not_found</source>
+                <target>Restaurant not found</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.review_not_found">
+                <source>exception.http.review_not_found</source>
+                <target>Review not found</target>
+            </trans-unit>
+
+            <trans-unit id="exception.http.wish_not_found">
+                <source>exception.http.wish_not_found</source>
+                <target>Wish not found</target>
+            </trans-unit>
+
+            <!-- SERIALIZE  -->
+
+            <trans-unit id="exception.serialize.deserialize">
+                <source>exception.serialize.deserialize</source>
+                <target>There is a problem with your request. Check your input and try again.</target>
+            </trans-unit>
+
+            <!-- VALIDATION -->
+
+            <trans-unit id="exception.validation.association">
+                <source>exception.validation.association</source>
+                <target>There is a problem with your request.</target>
+            </trans-unit>
+
+            <trans-unit id="exception.validation.validation">
+                <source>exception.validation.validation</source>
+                <target>Fix these errors.</target>
+            </trans-unit>
+
+            <!-- BAD REQUEST -->
+
+            <trans-unit id="exception.bad_request.change_password_required_parameters">
+                <source>exception.bad_request.change_password_required_parameters</source>
+                <target>Password and old password are both required</target>
+            </trans-unit>
+
+            <trans-unit id="exception.bad_request.password_required">
+                <source>exception.bad_request.password_required</source>
+                <target>Password is required</target>
+            </trans-unit>
+
+            <trans-unit id="exception.bad_request.missing_parameters">
+                <source>exception.bad_request.missing_parameters</source>
+                <target>Some required parameter are missing</target>
+            </trans-unit>
+
+            <!-- NOTIFICATION -->
+            <trans-unit id="notification.new.follower">
+                <source>notification.new.follower</source>
+                <target>%name% is following you.</target>
+            </trans-unit>
+
+            <trans-unit id="notification.new.facebook.friend">
+                <source>notification.new.facebook.friend</source>
+                <target>Your Facebook friend %name% is now on Tastd.</target>
+            </trans-unit>
+
+            <trans-unit id="notification.new.tagged.friends">
+                <source>notification.new.tagged.friends</source>
+                <target>Your friend %name% recommended to you %restaurant%.</target>
+            </trans-unit>
+
+            <trans-unit id="notification.leader.review">
+                <source>notification.leader.review</source>
+                <target>%name%: %restaurant% is now one of my favourite restaurants.</target>
+            </trans-unit>
+
+            <trans-unit id="notification.leader.wish">
+                <source>notification.leader.wish</source>
+                <target>%name%: %restaurant% is now on my wishlist.</target>
+            </trans-unit>
+
+            <trans-unit id="notification.leader.follows">
+                <source>notification.leader.follows</source>
+                <target>%name% started following %leader%.</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

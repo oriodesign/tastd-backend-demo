@@ -1,0 +1,10 @@
+short_name: tastd_bundle_corebundle_entity_notification
+class: Tastd\Bundle\CoreBundle\Entity\Notification
+fixtures:
+    1:
+        id: 1
+        content:
+            user: 1
+        queueId: "123456"
+        name: "USER_CREATED"
+        created: '2014-12-05T22:12:20+0100'

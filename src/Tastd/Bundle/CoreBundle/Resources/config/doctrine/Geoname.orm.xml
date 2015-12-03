@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\Geoname"
+            table="geonames"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\GeonameRepository">
+
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="asciiName" type="string" column="ascii_name" length="100" />
+        <field name="currencySymbol" type="string" column="currency_symbol" length="3" />
+        <field name="currencyCode" type="string" column="currency_code" length="3" />
+        <field name="lat" type="decimal" scale="7" precision="10"  />
+        <field name="lng" type="decimal" scale="7" precision="10"  />
+        <field name="country" type="string" length="2"  />
+        <field name="admin1" type="string" length="20"  />
+        <field name="population" type="integer" />
+        <field name="timezone" type="string" length="40" />
+        <field name="modified" type="datetime" />
+
+        <one-to-many field="reviews" mapped-by="geoname" target-entity="Tastd\Bundle\CoreBundle\Entity\Review">
+        </one-to-many>
+
+        <one-to-many field="wishes" mapped-by="geoname" target-entity="Tastd\Bundle\CoreBundle\Entity\Wish">
+        </one-to-many>
+
+        <one-to-many field="translations" mapped-by="geoname" target-entity="Tastd\Bundle\CoreBundle\Entity\GeoTranslation">
+        </one-to-many>
+
+
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Wish" exclusion-policy="all" >
+        <property name="id" expose="true" groups="MIN,EDIT" />
+        <property name="created" expose="true" groups="FULL" />
+        <property name="updated" expose="true" groups="FULL" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Restaurant" name="restaurant" expose="true" groups="MIN,CREATE" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Cuisine" name="cuisine" expose="true" groups="MIN,CREATE" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Geoname" name="geoname" expose="true" groups="MIN,CREATE" />
+    </class>
+</serializer>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Tastd\Bundle\CoreBundle\Entity\Cuisine">
+
+
+        <!-- Unique Constraint -->
+        <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
+            <option name="fields">
+                <value>prettyId</value>
+            </option>
+            <option name="message">validators.cuisine.unique_entity</option>
+        </constraint>
+
+        <!-- PRETTY ID -->
+        <property name="prettyId">
+            <constraint name="NotBlank">
+                <option name="message">validators.cuisine.pretty_id.not_blank</option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">2</option>
+                <option name="max">20</option>
+                <option name="minMessage">validators.cuisine.pretty_id.length</option>
+                <option name="maxMessage">validators.cuisine.pretty_id.length</option>
+            </constraint>
+        </property>
+
+        <!-- COLOR -->
+        <property name="color">
+            <constraint name="NotBlank">
+                <option name="message">validators.cuisine.color.not_blank</option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">3</option>
+                <option name="max">6</option>
+                <option name="minMessage">validators.cuisine.color.length</option>
+                <option name="maxMessage">validators.cuisine.color.length</option>
+            </constraint>
+        </property>
+
+        <!-- NAME -->
+        <property name="name">
+            <constraint name="NotBlank">
+                <option name="message">validators.cuisine.name.not_blank</option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">2</option>
+                <option name="max">30</option>
+                <option name="maxMessage">validators.cuisine.name.length</option>
+                <option name="minMessage">validators.cuisine.name.length</option>
+            </constraint>
+        </property>
+
+    </class>
+
+</constraint-mapping>

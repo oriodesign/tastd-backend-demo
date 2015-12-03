@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="FOS\UserBundle\Model\User" exclusion-policy="all" >
+        <property name="id" expose="true" type="integer" groups="RESTAURANT,MIN,CREATE,EDIT"/>
+        <property name="email" expose="true" serialized-name="email" groups="AUTH,EDIT"/>
+    </class>
+</serializer>

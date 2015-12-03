@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="jms_serializer.unserialize_object_constructor.class">Tastd\Bundle\CoreBundle\Serializer\ObjectConstructor</parameter>
+    </parameters>
+
+    <services>
+
+        <!-- CACHE META BAG FACTORY -->
+        <service id="tastd.cache_meta_bag_factory" class="Tastd\Bundle\CoreBundle\Cache\CacheMetaBagFactory">
+        </service>
+
+        <!-- CACHE MANAGER -->
+        <service id="tastd.cache_manager" class="Tastd\Bundle\CoreBundle\Cache\CacheManager">
+            <argument type="service" id="fos_http_cache.handler.tag_handler" />
+            <argument type="service" id="tastd.cache_meta_bag_factory" />
+            <argument>%enable_cache_headers%</argument>
+        </service>
+
+        <!-- =====================
+
+        TAG STRATEGIES
+
+        ===================== -->
+
+        <!-- LEADERS OF TAG STRATEGY-->
+        <service id="tastd.leaders_of_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\LeadersOfTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- FOLLOWERS OF TAG STRATEGY-->
+        <service id="tastd.followers_of_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\FollowersOfTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- ENTITIES OF GEONAME TAG STRATEGY-->
+        <service id="tastd.entities_of_geoname_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\EntitiesOfGeonameTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- ENTITIES OF LEADERS OF TAG STRATEGY-->
+        <service id="tastd.entities_of_leaders_of_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\EntitiesOfLeadersOfTagCacheStrategy">
+            <argument type="service" id="tastd.user_repository" />
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- ENTITIES OF USERS TAG STRATEGY-->
+        <service id="tastd.entities_of_users_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\EntitiesOfUsersTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- ENTITIES OF USER TAG STRATEGY -->
+        <service id="tastd.entities_of_user_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\EntitiesOfUserTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- REVIEWED BY TAG STRATEGY -->
+        <service id="tastd.reviewed_by_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\ReviewedByTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- WISHED BY TAG STRATEGY -->
+        <service id="tastd.wished_by_tag_cache_strategy" class="Tastd\Bundle\CoreBundle\Cache\TagStrategy\WishedByTagCacheStrategy">
+            <tag name="tastd.tag_cache_strategy" />
+        </service>
+
+        <!-- =====================
+
+        INVALIDATE STRATEGIES
+
+        ===================== -->
+
+        <!-- CONNECTION INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.connection_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\ConnectionInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- OPTION INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.option_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\OptionInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- PHOTO INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.photo_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\PhotoInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- PUSH MESSAGE INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.push_message_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\PushMessageInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- RESTAURANT INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.restaurant_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\RestaurantInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- REVIEW INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.review_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\ReviewInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- TAG INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.tag_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\TagInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+        <!-- WISH INVALIDATE CACHE STRATEGY -->
+        <service
+                id="tastd.wish_invalidate_cache_strategy"
+                class="Tastd\Bundle\CoreBundle\Cache\InvalidateStrategy\WishInvalidateCacheStrategy">
+            <tag name="tastd.invalidate_cache_strategy" />
+        </service>
+
+
+    </services>
+
+</container>

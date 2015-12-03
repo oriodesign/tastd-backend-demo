@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- NOTIFICATION FACTORY BAG -->
+        <service id="tastd.notification_factory_bag" class="Tastd\Bundle\CoreBundle\Notification\NotificationFactoryBag">
+        </service>
+
+        <!-- NEW FOLLOWER NOTIFICATION FACTORY -->
+        <service id="tastd.new_follower_notification_factory" class="Tastd\Bundle\CoreBundle\Notification\NewFollowerNotificationFactory">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="translator" />
+            <tag name="tastd.notification_factory" />
+        </service>
+
+        <!-- LEADER FOLLOWS NOTIFICATION FACTORY -->
+        <service id="tastd.leader_follows_notification_factory" class="Tastd\Bundle\CoreBundle\Notification\LeaderFollowsNotificationFactory">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="translator" />
+            <argument type="service" id="tastd.filter.frequency_filter" />
+            <tag name="tastd.notification_factory" />
+        </service>
+
+        <!-- LEADER REVIEW NOTIFICATION FACTORY -->
+        <service id="tastd.leader_review_notification_factory" class="Tastd\Bundle\CoreBundle\Notification\LeaderReviewNotificationFactory">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="translator" />
+            <argument type="service" id="tastd.filter.frequency_filter" />
+            <tag name="tastd.notification_factory" />
+        </service>
+
+        <!-- NEW FACEBOOK FRIEND NOTIFICATION FACTORY -->
+        <service id="tastd.new_facebook_friend_notification_factory" class="Tastd\Bundle\CoreBundle\Notification\NewFacebookFriendNotificationFactory">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="tastd.facebook_client" />
+            <argument type="service" id="translator" />
+            <tag name="tastd.notification_factory" />
+        </service>
+
+        <!-- NEW TAGGED USER NOTIFICATION FACTORY -->
+        <service id="tastd.new_tagged_user_notification_factory" class="Tastd\Bundle\CoreBundle\Notification\NewTaggedUserNotificationFactory">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="translator" />
+            <argument type="service" id="tastd.filter.frequency_filter" />
+            <tag name="tastd.notification_factory" />
+        </service>
+
+        <!-- LEADER WISH NOTIFICATION FACTORY -->
+        <service id="tastd.leader_wish_notification_factory" class="Tastd\Bundle\CoreBundle\Notification\LeaderWishNotificationFactory">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="translator" />
+            <argument type="service" id="tastd.filter.frequency_filter" />
+            <tag name="tastd.notification_factory" />
+        </service>
+
+        <!-- NOTIFICATION DISPATCHER -->
+        <service id="tastd.notification_dispatcher" class="Tastd\Bundle\CoreBundle\Notification\NotificationDispatcher">
+            <argument type="service" id="rms_push_notifications" />
+            <argument type="service" id="tastd.device_repository" />
+        </service>
+
+        <!-- FREQUENCY FILTER -->
+        <service id="tastd.filter.frequency_filter" class="Tastd\Bundle\CoreBundle\Notification\Filter\FrequencyFilter">
+            <argument type="service" id="tastd.push_message_repository" />
+        </service>
+
+    </services>
+</container>

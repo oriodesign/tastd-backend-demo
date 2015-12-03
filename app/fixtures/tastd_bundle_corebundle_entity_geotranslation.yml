@@ -1,0 +1,88 @@
+short_name: tastd_bundle_corebundle_entity_geotranslation
+class: Tastd\Bundle\CoreBundle\Entity\GeoTranslation
+fixtures:
+    1:
+        id: 1
+        geoname: 8
+        isoLanguage: it
+        alternateName: Milano
+    2:
+        id: 2
+        isoLanguage: it
+        alternateName: Lombardia
+    3:
+        id: 3
+        geoname: 1
+        isoLanguage: it
+        alternateName: Londra
+    4:
+        id: 4
+        geoname: 3
+        isoLanguage: it
+        alternateName: Berlino
+    5:
+        id: 5
+        geoname: 1
+        isoLanguage: en
+        alternateName: London
+    6:
+        id: 6
+        geoname: 3
+        isoLanguage: en
+        alternateName: Berlin
+    7:
+        id: 7
+        geoname: 4
+        isoLanguage: en
+        alternateName: Paris
+    8:
+        id: 8
+        geoname: 4
+        isoLanguage: it
+        alternateName: Parigi
+    9:
+        id: 9
+        geoname: 8
+        isoLanguage: en
+        alternateName: Milan
+    10:
+        id: 10
+        geoname: 6
+        isoLanguage: en
+        alternateName: Verona
+    11:
+        id: 11
+        geoname: 6
+        isoLanguage: it
+        alternateName: Verona
+    12:
+        id: 12
+        isoLanguage: en
+        alternateName: 'New York City'
+    13:
+        id: 13
+        isoLanguage: it
+        alternateName: 'New York'
+    14:
+        id: 14
+        isoLanguage: en
+        alternateName: Lombardy
+    15:
+        id: 15
+        geoname: 1
+        isoLanguage: en
+        alternateName: 'London City'
+    16:
+        id: 16
+        geoname: 1
+        isoLanguage: en
+        alternateName: 'City of London'
+    17:
+        id: 17
+        geoname: 3
+        isoLanguage: it
+        alternateName: Berlino
+    18:
+        id: 18
+        isoLanguage: en
+        alternateName: Turin

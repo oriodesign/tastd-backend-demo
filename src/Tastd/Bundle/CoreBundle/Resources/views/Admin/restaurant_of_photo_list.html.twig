@@ -1,0 +1,16 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field%}
+
+
+    {% set route_name = field_description.options.route.name %}
+    {% set route_role = route_name | upper %}
+
+    <div>
+            <div>
+                <span style="font-weight: bold;">{{ object.restaurant.name }}</span><br/>
+                <span>{{ object.restaurant.geoname.asciiName }}</span><br/>
+                <span>{{ object.restaurant.address }}</span>
+            </div>
+    </div>
+{% endblock %}

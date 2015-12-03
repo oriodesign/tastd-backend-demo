@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Tastd\Bundle\CoreBundle\Entity\Device">
+
+        <!-- NAME -->
+        <property name="name">
+            <constraint name="NotNull">
+                <option name="message">validators.device.external_id.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- TOKEN -->
+        <property name="token">
+            <constraint name="NotNull">
+                <option name="message">validators.device.token.not_null</option>
+            </constraint>
+        </property>
+
+        <!-- USER -->
+        <property name="user">
+            <constraint name="NotNull">
+                <option name="message">validators.device.user.not_null</option>
+            </constraint>
+        </property>
+
+    </class>
+
+</constraint-mapping>

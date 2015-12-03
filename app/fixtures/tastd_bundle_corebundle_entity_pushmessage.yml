@@ -1,0 +1,8 @@
+short_name: tastd_bundle_corebundle_entity_pushmessage
+class: Tastd\Bundle\CoreBundle\Entity\PushMessage
+fixtures:
+    1:
+        id: 1
+        seen: false
+        user: 1
+        notification: 1

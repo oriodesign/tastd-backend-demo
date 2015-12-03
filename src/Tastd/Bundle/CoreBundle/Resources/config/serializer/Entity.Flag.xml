@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Flag" exclusion-policy="all" >
+        <property name="restaurantId" expose="true" groups="MIN" serialized-name="restaurantId" />
+        <property name="position" expose="true" groups="MIN" />
+        <property name="name" expose="true" groups="MIN" />
+        <property name="lat" expose="true" groups="MIN" />
+        <property name="lng" expose="true" groups="MIN" />
+        <property name="cuisineName" expose="true" groups="MIN" serialized-name="cuisineName" />
+        <property name="cuisineId" expose="true" groups="MIN" serialized-name="cuisineId" />
+        <property name="color" expose="true" groups="MIN" />
+        <property name="formattedAddress" expose="true" groups="MIN" />
+        <property name="picture" expose="true" groups="MIN" />
+    </class>
+</serializer>

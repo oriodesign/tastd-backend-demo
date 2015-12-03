@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- AWS -->
+        <service id="tastd.aws" class="Tastd\Bundle\CoreBundle\Aws\Aws">
+            <argument>%aws_access_key_id%</argument>
+            <argument>%aws_secret_key%</argument>
+        </service>
+
+        <!-- S3 -->
+        <service id="tastd.s3_client" class="Tastd\Bundle\CoreBundle\Aws\S3Client">
+            <argument>%aws_access_key_id%</argument>
+            <argument>%aws_secret_key%</argument>
+            <argument>%s3_bucket_name%</argument>
+            <argument type="service" id="tastd.image_manager" />
+        </service>
+
+        <!-- SQS -->
+        <service id="tastd.sqs_client" class="Tastd\Bundle\CoreBundle\Aws\SqsClient">
+            <argument>%aws_access_key_id%</argument>
+            <argument>%aws_secret_key%</argument>
+            <argument>%queue_url%</argument>
+        </service>
+
+    </services>
+</container>

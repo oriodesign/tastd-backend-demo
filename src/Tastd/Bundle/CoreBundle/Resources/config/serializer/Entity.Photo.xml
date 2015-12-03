@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Photo" exclusion-policy="all" >
+        <property name="id" expose="true" groups="RESTAURANT,MIN" />
+        <property name="src" expose="true" groups="RESTAURANT,MIN" />
+        <property name="thumb" expose="true" groups="RESTAURANT,MIN" />
+        <property name="created" expose="true" groups="FULL" />
+        <property name="updated" expose="true" groups="FULL" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Restaurant" name="restaurant" expose="true" groups="CREATE" />
+        <property name="uploadedPicture" expose="true" groups="CREATE" type="string" serialized-name="uploadedPicture" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\User" name="user" expose="true" groups="RESTAURANT" />
+    </class>
+</serializer>

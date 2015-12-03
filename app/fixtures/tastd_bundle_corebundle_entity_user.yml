@@ -1,0 +1,820 @@
+short_name: tastd_bundle_corebundle_entity_user
+class: Tastd\Bundle\CoreBundle\Entity\User
+fixtures:
+    1:
+        id: 1
+        authToken: user_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: user_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: user
+        lastName: user
+        fullName: 'user user'
+        headline: Student
+        about: null
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 13
+        leadersCount: 3
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [4, 5, 6]
+        followers: [1, 2, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: [1, 2, 3]
+        username: user@gmail.com
+        usernameCanonical: user@gmail.com
+        email: user@gmail.com
+        emailCanonical: user@gmail.com
+        enabled: true
+        salt: fjwl79tvlugc0gw4g0kk80ooo8cwcgk
+        password: iZnzc/l/R4pKVlfkrmj2mTZiwkRsCZlCpwEzWEnDl9a2a9o5R4SUBK692cAGGpoKSOOmtbe7AXFUF9ZhKV1cQg==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: user_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2017-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2017-11-05T20:50:47+0100'
+        featured: false
+    2:
+        id: 2
+        authToken: ruben_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: ruben_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: ruben
+        lastName: barilani
+        fullName: 'ruben barilani'
+        headline: 'Crazy horse'
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 1
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [1]
+        followers: [4, 17, 18]
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: ruben@gmail.com
+        usernameCanonical: ruben@gmail.com
+        email: ruben@gmail.com
+        emailCanonical: ruben@gmail.com
+        enabled: true
+        salt: rl4np850a00g44cw0cs4woso0s0gkkc
+        password: hhrd7xKzMCTe1VwPzaUxnabAudX7LB7WKpqs7AJTVcW1WIaJII8a0dxvabKfeEDTLj73f3BWarG9VCpZ0qgEcg==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: ruben_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    3:
+        id: 3
+        authToken: matteo_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: matteo_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: matteo
+        lastName: orioli
+        fullName: 'matteo orioli'
+        headline: 'Code and Pizza lover'
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 1
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [2, 17]
+        followers: [5]
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: matteo@gmail.com
+        usernameCanonical: matteo@gmail.com
+        email: matteo@gmail.com
+        emailCanonical: matteo@gmail.com
+        enabled: true
+        salt: d8mx53q2y3w4csowog8k0o4osookk48
+        password: OXcqPnEG6HzE4kKs0Zf1h6GIAuzau9efRC5c2/M4ZJn04Zp6QxFuyoiw1gdBHCCLiK2wuukEDT/QfErBh0gLcw==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: matteo_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2017-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2017-11-05T20:50:47+0100'
+        featured: false
+    4:
+        id: 4
+        authToken: andrea_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: andrea_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: andrea
+        lastName: pedroni
+        fullName: 'andrea pedroni'
+        headline: Founder
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 1
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [3, 18]
+        followers: [6]
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: andrea@gmail.com
+        usernameCanonical: andrea@gmail.com
+        email: andrea@gmail.com
+        emailCanonical: andrea@gmail.com
+        enabled: true
+        salt: 6qliyley50ws4o0gskkgc8w8oos84gg
+        password: YbbzTdxn/fKwfW19hW8s5YiZ3Xwup9OJlwQm7w6sj68HKnUvWCHtIKvmg47U+p8Gz8ZpfyESVMu8yVim70+hFA==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: andrea_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    5:
+        id: 5
+        authToken: john_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: john_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: john
+        lastName: doe
+        fullName: 'john doe'
+        headline: 'awesome designer'
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 1
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [7]
+        followers: [19]
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: john@gmail.com
+        usernameCanonical: john@gmail.com
+        email: john@gmail.com
+        emailCanonical: john@gmail.com
+        enabled: true
+        salt: fjwl79tvlugc0gw4g0kk80ooo8cwcgk
+        password: iZnzc/l/R4pKVlfkrmj2mTZiwkRsCZlCpwEzWEnDl9a2a9o5R4SUBK692cAGGpoKSOOmtbe7AXFUF9ZhKV1cQg==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: john_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    6:
+        id: 6
+        authToken: jack_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: jack_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: jack
+        lastName: black
+        fullName: 'jack black'
+        headline: 'Jack daniels'
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [8]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: jack@gmail.com
+        usernameCanonical: jack@gmail.com
+        email: jack@gmail.com
+        emailCanonical: jack@gmail.com
+        enabled: true
+        salt: rl4np850a00g44cw0cs4woso0s0gkkc
+        password: hhrd7xKzMCTe1VwPzaUxnabAudX7LB7WKpqs7AJTVcW1WIaJII8a0dxvabKfeEDTLj73f3BWarG9VCpZ0qgEcg==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: jack_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    7:
+        id: 7
+        authToken: sam_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: sam_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: sam
+        lastName: sam
+        fullName: 'sam sam'
+        headline: 'I want you for us army'
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [9]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: sam@gmail.com
+        usernameCanonical: sam@gmail.com
+        email: sam@gmail.com
+        emailCanonical: sam@gmail.com
+        enabled: true
+        salt: d8mx53q2y3w4csowog8k0o4osookk48
+        password: OXcqPnEG6HzE4kKs0Zf1h6GIAuzau9efRC5c2/M4ZJn04Zp6QxFuyoiw1gdBHCCLiK2wuukEDT/QfErBh0gLcw==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: sam_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    8:
+        id: 8
+        authToken: george_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: george_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: george
+        lastName: george
+        fullName: 'george george'
+        headline: Foodies
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [10]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: george@gmail.com
+        usernameCanonical: george@gmail.com
+        email: george@gmail.com
+        emailCanonical: george@gmail.com
+        enabled: true
+        salt: 6qliyley50ws4o0gskkgc8w8oos84gg
+        password: YbbzTdxn/fKwfW19hW8s5YiZ3Xwup9OJlwQm7w6sj68HKnUvWCHtIKvmg47U+p8Gz8ZpfyESVMu8yVim70+hFA==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: george_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    9:
+        id: 9
+        authToken: james_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: james_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: james
+        lastName: smith
+        fullName: 'james smith'
+        headline: 'Oh Oh oh'
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [11]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: james@gmail.com
+        usernameCanonical: james@gmail.com
+        email: james@gmail.com
+        emailCanonical: james@gmail.com
+        enabled: true
+        salt: fjwl79tvlugc0gw4g0kk80ooo8cwcgk
+        password: iZnzc/l/R4pKVlfkrmj2mTZiwkRsCZlCpwEzWEnDl9a2a9o5R4SUBK692cAGGpoKSOOmtbe7AXFUF9ZhKV1cQg==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: james_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    10:
+        id: 10
+        authToken: robert_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: robert_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: robert
+        lastName: williams
+        fullName: 'robert williams'
+        headline: null
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [12]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: robert@gmail.com
+        usernameCanonical: robert@gmail.com
+        email: robert@gmail.com
+        emailCanonical: robert@gmail.com
+        enabled: true
+        salt: rl4np850a00g44cw0cs4woso0s0gkkc
+        password: hhrd7xKzMCTe1VwPzaUxnabAudX7LB7WKpqs7AJTVcW1WIaJII8a0dxvabKfeEDTLj73f3BWarG9VCpZ0qgEcg==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: robert_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    11:
+        id: 11
+        authToken: david_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: david_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: david
+        lastName: miller
+        fullName: 'david miller'
+        headline: null
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 1
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [13]
+        followers: [20]
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: david@gmail.com
+        usernameCanonical: david@gmail.com
+        email: david@gmail.com
+        emailCanonical: david@gmail.com
+        enabled: true
+        salt: d8mx53q2y3w4csowog8k0o4osookk48
+        password: OXcqPnEG6HzE4kKs0Zf1h6GIAuzau9efRC5c2/M4ZJn04Zp6QxFuyoiw1gdBHCCLiK2wuukEDT/QfErBh0gLcw==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: david_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    12:
+        id: 12
+        authToken: paul_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: paul_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: paul
+        lastName: paul
+        fullName: 'paul paul'
+        headline: null
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [14]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: paul@gmail.com
+        usernameCanonical: paul@gmail.com
+        email: paul@gmail.com
+        emailCanonical: paul@gmail.com
+        enabled: true
+        salt: 6qliyley50ws4o0gskkgc8w8oos84gg
+        password: YbbzTdxn/fKwfW19hW8s5YiZ3Xwup9OJlwQm7w6sj68HKnUvWCHtIKvmg47U+p8Gz8ZpfyESVMu8yVim70+hFA==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: paul_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    13:
+        id: 13
+        authToken: lee_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: lee_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: lee
+        lastName: bruce
+        fullName: 'lee bruce'
+        headline: null
+        about: null
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [15]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: lee@gmail.com
+        usernameCanonical: lee@gmail.com
+        email: lee@gmail.com
+        emailCanonical: lee@gmail.com
+        enabled: true
+        salt: 6qliyley50ws4o0gskkgc8w8oos84gg
+        password: YbbzTdxn/fKwfW19hW8s5YiZ3Xwup9OJlwQm7w6sj68HKnUvWCHtIKvmg47U+p8Gz8ZpfyESVMu8yVim70+hFA==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: lee_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    14:
+        id: 14
+        authToken: will_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: will_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: will
+        lastName: smith
+        fullName: 'will smith'
+        headline: null
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 1
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [16]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: will@gmail.com
+        usernameCanonical: will@gmail.com
+        email: will@gmail.com
+        emailCanonical: will@gmail.com
+        enabled: true
+        salt: 6qliyley50ws4o0gskkgc8w8oos84gg
+        password: YbbzTdxn/fKwfW19hW8s5YiZ3Xwup9OJlwQm7w6sj68HKnUvWCHtIKvmg47U+p8Gz8ZpfyESVMu8yVim70+hFA==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: will_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    15:
+        id: 15
+        authToken: alby_token
+        authTokenExpire: '2017-06-12T20:50:47+0200'
+        refreshToken: alby_token
+        refreshTokenExpire: '2017-06-12T20:50:47+0200'
+        credentials: {  }
+        firstName: alby
+        lastName: lanza
+        fullName: 'alby lanza'
+        headline: null
+        about: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I''m in a transitional period so I don''t wanna kill you, I wanna help you.'
+        birthYear: null
+        avatar: null
+        created: '2014-11-02T18:05:14+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 0
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: {  }
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: [4]
+        username: alby@gmail.com
+        usernameCanonical: alby@gmail.com
+        email: alby@gmail.com
+        emailCanonical: alby@gmail.com
+        enabled: true
+        salt: 6qliyley50ws4o0gskkgc8w8oos84gg
+        password: YbbzTdxn/fKwfW19hW8s5YiZ3Xwup9OJlwQm7w6sj68HKnUvWCHtIKvmg47U+p8Gz8ZpfyESVMu8yVim70+hFA==
+        lastLogin: '2014-11-05T20:50:47+0100'
+        confirmationToken: alby_token
+        passwordRequestedAt: '2014-11-05T20:50:47+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-11-05T20:50:47+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-11-05T20:50:47+0100'
+        featured: false
+    16:
+        id: 16
+        authToken: zvmr8SpCu_xZqDUhKFvc5KityAj3SEzKqO2TDYHRuyI
+        authTokenExpire: '2017-01-26T15:35:35+0100'
+        refreshToken: Kajq-CjIgc4KYzRJJ9fNk_JzJ_9MHo3YEdcpewME3dQ
+        refreshTokenExpire: '2017-01-27T14:35:35+0100'
+        credentials: [1]
+        firstName: Matteo
+        lastName: Orioli
+        fullName: 'Matteo Orioli'
+        headline: null
+        about: null
+        birthYear: 1985
+        avatar: avatar/54821fb2590c9.jpg
+        created: '2014-12-05T22:12:18+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 2
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: [19, 20]
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: oriodesign@gmail.com
+        usernameCanonical: oriodesign@gmail.com
+        email: oriodesign@gmail.com
+        emailCanonical: oriodesign@gmail.com
+        enabled: true
+        salt: 99isrdmtazok08cck8g44gg0k8g08oc
+        password: 54821fb22aa09
+        lastLogin: '2017-01-26T14:35:35+0100'
+        confirmationToken: b9BNvIANMpAJdXV1hrSLhjLARJVNHTr6WK-ke2VcK9Q
+        passwordRequestedAt: '2014-12-14T16:47:02+0100'
+        locked: false
+        expired: false
+        expiresAt: '2014-12-14T16:47:02+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2014-12-14T16:47:02+0100'
+        featured: false
+    17:
+        id: 17
+        authToken: null
+        authTokenExpire: '2017-01-09T16:49:11+0100'
+        refreshToken: null
+        refreshTokenExpire: '2017-01-09T16:49:11+0100'
+        credentials: {  }
+        firstName: Tastd
+        lastName: Admin
+        fullName: 'Tastd Admin'
+        headline: null
+        about: null
+        birthYear: null
+        avatar: null
+        created: '2017-01-07T13:57:07+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 0
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: {  }
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: admin@gmail.com
+        usernameCanonical: admin@gmail.com
+        email: admin@gmail.com
+        emailCanonical: admin@gmail.com
+        enabled: true
+        salt: tjjmcl0spc0w8kcwws0kgowc4w84sok
+        password: wHhDEOA/KWM2jdP4pEz0yTrcOSO312yBpcBqifG0ts3iF9S7JmM8ttXm5iyGbkLwEuJ3iuLknmMPcWSDFsN3CA==
+        lastLogin: '2017-01-07T13:59:22+0100'
+        confirmationToken: null
+        passwordRequestedAt: '2017-01-09T16:49:11+0100'
+        locked: false
+        expired: false
+        expiresAt: '2017-01-09T16:49:11+0100'
+        roles: [ROLE_ADMIN]
+        credentialsExpired: false
+        credentialsExpireAt: '2017-01-09T16:49:11+0100'
+        featured: false
+    18:
+        id: 18
+        authToken: LlgGibCVEZRudxWwEhViEL34mjiqh9wEOkoblJbzqSY
+        authTokenExpire: '2017-01-25T19:23:36+0100'
+        refreshToken: j62X728LaIjxeKQ17N4xvh1EBgM9ABKMVedp1BxW4XU
+        refreshTokenExpire: '2017-01-26T18:23:36+0100'
+        credentials: {  }
+        firstName: teo
+        lastName: teo
+        fullName: 'teo teo'
+        headline: null
+        about: null
+        birthYear: null
+        avatar: null
+        created: '2017-01-25T18:23:36+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 0
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: {  }
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: teo@gmail.com
+        usernameCanonical: teo@gmail.com
+        email: teo@gmail.com
+        emailCanonical: teo@gmail.com
+        enabled: true
+        salt: ecxlp1we2s8ckwcccc00ww8wwgwkgwg
+        password: /inP/hzBxZyCUIGPL3PMveijuaEyym43h8s6B4HwY/axI3QJONeV5nqiUVlU8VVgsmeXKenjqMuq3YNr1891uQ==
+        lastLogin: '2017-01-25T18:23:36+0100'
+        confirmationToken: wBcLgjDVFI1AyzvArCH4A2HSEiZD2y9qOf1TmM6jK1A
+        passwordRequestedAt: '2017-01-27T17:22:11+0100'
+        locked: false
+        expired: false
+        expiresAt: '2017-01-27T17:22:11+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2017-01-27T17:22:11+0100'
+        featured: false
+    19:
+        id: 19
+        authToken: veemrfjVe4ABsx4GHz5I7p-CTQi8lsOeTyVOpjTo3k8
+        authTokenExpire: '2017-01-26T15:11:33+0100'
+        refreshToken: haKUelxw0ZrUrwUtgtFrNA-9t8cVVhzF9G_xAVmuivI
+        refreshTokenExpire: '2017-01-27T14:11:33+0100'
+        credentials: {  }
+        firstName: zio
+        lastName: zio
+        fullName: 'zio zio'
+        headline: null
+        about: null
+        birthYear: null
+        avatar: null
+        created: '2017-01-26T14:11:33+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        followersCount: 0
+        leadersCount: 0
+        reviewsCount: 0
+        wishesCount: 0
+        leaders: {  }
+        followers: {  }
+        score: 0
+        options: {  }
+        geoScores: {  }
+        reviews: {  }
+        username: zio@gmail.com
+        usernameCanonical: zio@gmail.com
+        email: zio@gmail.com
+        emailCanonical: zio@gmail.com
+        enabled: true
+        salt: imd2labsrz4g40wwo8w4wsos0cogows
+        password: l8KRHsg3cLfrQMsSYm59r7Z1VPEuVdqoIp9EWJLZ49l8yLqSVA9uVAl8nLifJHY+v8PMlukU/HoNl/OuJtt2VA==
+        lastLogin: '2017-01-26T14:11:33+0100'
+        confirmationToken: kCVEtCW2uiframBHOkGTg-JXrFqiBJ9kvIvdM3mYAHE
+        passwordRequestedAt: '2017-01-27T17:22:11+0100'
+        locked: false
+        expired: false
+        expiresAt: '2017-01-27T17:22:11+0100'
+        roles: {  }
+        credentialsExpired: false
+        credentialsExpireAt: '2017-01-27T17:22:11+0100'
+        featured: false

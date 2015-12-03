@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- FOURSQUARE IMPORT COMMAND -->
+        <service id="tastd.foursquare_import_command" class="Tastd\Bundle\CoreBundle\Command\FoursquareImportCommand">
+            <argument type="service" id="tastd.foursquare_client"/>
+            <argument type="service" id="tastd.foursquare_venue_manager"/>
+            <argument type="service" id="validator" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="tastd.command_output_printer" />
+            <argument type="service" id="tastd.geoname_repository" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- OUTPUT PRINTER -->
+        <service id="tastd.command_output_printer" class="Tastd\Bundle\CoreBundle\Command\Output\Printer">
+            <argument type="service" id="tastd.entity_formatter_bag" />
+        </service>
+
+        <!-- CACHE CLEAN COMMAND -->
+        <service id="tastd.cache_clean_command" class="Tastd\Bundle\CoreBundle\Command\CacheCleanCommand">
+            <argument type="service" id="tastd.cache_manager" />
+            <tag name="console.command" />
+        </service>
+
+
+        <!-- GEONAME DELETE COMMAND -->
+        <service id="tastd.geoname_delete_command" class="Tastd\Bundle\CoreBundle\Command\GeonameDeleteCommand">
+            <argument type="service" id="tastd.geoname_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- GEONAME FIND COMMAND -->
+        <service id="tastd.geoname_find_command" class="Tastd\Bundle\CoreBundle\Command\GeonameFindCommand">
+            <argument type="service" id="tastd.geoname_repository" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- USER GENERATOR COMMAND -->
+        <service id="tastd.user_generator_command" class="Tastd\Bundle\CoreBundle\Command\UserGeneratorCommand">
+            <argument type="service" id="tastd.random_user_factory" />
+            <argument type="service" id="tastd.random_connection_factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- RECAP EMAIL COMMAND -->
+        <service id="tastd.recap_email_command" class="Tastd\Bundle\CoreBundle\Command\RecapEmailCommand">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="tastd.review_repository" />
+            <argument type="service" id="tastd.score_manager" />
+            <argument type="service" id="tastd.mailer" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- RANKING REORDER COMMAND -->
+        <service id="tastd.ranking_reorder_command" class="Tastd\Bundle\CoreBundle\Command\RankingReorderCommand">
+            <argument type="service" id="tastd.review_repository" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- RESTAURANT GENERATOR COMMAND -->
+        <service id="tastd.restaurant_generator_command" class="Tastd\Bundle\CoreBundle\Command\RestaurantGeneratorCommand">
+            <argument type="service" id="tastd.random_restaurant_factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- RESTAURANT FIND COMMAND -->
+        <service id="tastd.restaurant_find_command" class="Tastd\Bundle\CoreBundle\Command\RestaurantFindCommand">
+            <argument type="service" id="tastd.restaurant_repository" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- REVIEW HANDLE COMMAND -->
+        <service id="tastd.review_handle_command" class="Tastd\Bundle\CoreBundle\Command\ReviewHandleCommand">
+            <argument type="service" id="tastd.review_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- USER FIND COMMAND -->
+        <service id="tastd.user_find_command" class="Tastd\Bundle\CoreBundle\Command\UserFindCommand">
+            <argument type="service" id="tastd.user_repository" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- SCORE CALCULATOR COMMAND -->
+        <service id="tastd.score_calculator_command" class="Tastd\Bundle\CoreBundle\Command\ScoreCalculatorCommand">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="tastd.review_repository" />
+            <argument type="service" id="tastd.score_manager" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- NOTIFICATION RECEIVER COMMAND -->
+        <service id="tastd.notification_receiver_command" class="Tastd\Bundle\CoreBundle\Command\NotificationReceiverCommand">
+            <argument type="service" id="tastd.sqs_client" />
+            <argument type="service" id="serializer" />
+            <argument type="service" id="tastd.notification_factory_bag" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="tastd.notification_dispatcher" />
+            <argument type="service" id="validator" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- PUSH MESSAGE COMMAND -->
+        <service id="tastd.push_message_command" class="Tastd\Bundle\CoreBundle\Command\PushMessageCommand">
+            <argument type="service" id="rms_push_notifications" />
+            <argument type="service" id="notificato" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- REVIEW GENERATOR COMMAND -->
+        <service id="tastd.review_generator_command" class="Tastd\Bundle\CoreBundle\Command\ReviewGeneratorCommand">
+            <argument type="service" id="tastd.random_review_factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- TAG COUNT COMMAND -->
+        <service id="tastd.tag_count_command" class="Tastd\Bundle\CoreBundle\Command\TagCountCommand">
+            <argument type="service" id="tastd.tag_manager" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- COLORS COMMAND -->
+        <service id="tastd.cuisine_colors_command" class="Tastd\Bundle\CoreBundle\Command\CuisineColorCommand">
+            <argument type="service" id="tastd.cuisine_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <tag name="console.command" />
+        </service>
+
+    </services>
+</container>

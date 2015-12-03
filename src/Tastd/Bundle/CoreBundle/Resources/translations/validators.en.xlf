@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <!-- CONNECTION -->
+
+            <trans-unit id="validators.connection.unique_entity">
+                <source>validators.connection.unique_entity</source>
+                <target>You are already follower of this user</target>
+            </trans-unit>
+
+            <trans-unit id="validators.connection.follower.not_null">
+                <source>validators.connection.follower.not_null</source>
+                <target>Follower is missing</target>
+            </trans-unit>
+
+            <trans-unit id="validators.connection.leader.not_null">
+                <source>validators.connection.leader.not_null</source>
+                <target>Following is missing</target>
+            </trans-unit>
+
+            <trans-unit id="validators.connection.status.choice">
+                <source>validators.connection.status.choice</source>
+                <target>Insert a valid status</target>
+            </trans-unit>
+
+            <trans-unit id="validators.connection.status.length">
+                <source>validators.connection.status.length</source>
+                <target>Insert a valid status</target>
+            </trans-unit>
+
+            <!-- CONVERSION -->
+
+            <trans-unit id="validators.conversion.fingerprint.not_blank">
+                <source>validators.conversion.fingerprint.not_blank</source>
+                <target>Insert a valid fingerprint</target>
+            </trans-unit>
+
+            <trans-unit id="validators.conversion.invite.not_null">
+                <source>validators.conversion.invite.not_null</source>
+                <target>Insert a valid invite</target>
+            </trans-unit>
+
+            <trans-unit id="validators.conversion.unique_entity">
+                <source>validators.conversion.unique_entity</source>
+                <target>You have already confirmed this invite</target>
+            </trans-unit>
+
+            <!-- CREDENTIAL -->
+
+            <trans-unit id="validators.credential.provider.length">
+                <source>validators.credential.provider.length</source>
+                <target>Insert a valid provider</target>
+            </trans-unit>
+
+            <trans-unit id="validators.credential.provider.choice">
+                <source>validators.credential.provider.choice</source>
+                <target>Insert a valid provider</target>
+            </trans-unit>
+
+            <trans-unit id="validators.credential.unique_entity">
+                <source>validators.credential.unique_entity</source>
+                <target>A credential already exists for this provider</target>
+            </trans-unit>
+
+            <trans-unit id="validators.credential.unique_entity.external_id">
+                <source>validators.credential.unique_entity.external_id</source>
+                <target>A credential already exists for this referred user</target>
+            </trans-unit>
+
+            <trans-unit id="validators.credential.external_id.not_null">
+                <source>validators.credential.external_id.not_null</source>
+                <target>There is a problem with your authentication. Please contact the administrator.</target>
+            </trans-unit>
+
+            <trans-unit id="validators.credential.token.not_null">
+                <source>validators.credential.token.not_null</source>
+                <target>There is a problem with your authentication. Please contact the administrator.</target>
+            </trans-unit>
+
+            <!-- CUISINE -->
+
+            <trans-unit id="validators.cuisine.unique_entity">
+                <source>validators.cuisine.unique_entity</source>
+                <target>A cuisine with this id already exists</target>
+            </trans-unit>
+
+            <trans-unit id="validators.cuisine.pretty_id.not_blank">
+                <source>validators.cuisine.pretty_id.not_blank</source>
+                <target>Insert a pretty id</target>
+            </trans-unit>
+
+            <trans-unit id="validators.cuisine.pretty_id.length">
+                <source>validators.cuisine.pretty_id.length</source>
+                <target>Insert a valid pretty id</target>
+            </trans-unit>
+
+            <trans-unit id="validators.cuisine.color.length">
+                <source>validators.cuisine.color.length</source>
+                <target>Insert a valid color</target>
+            </trans-unit>
+
+            <trans-unit id="validators.cuisine.color.not_blank">
+                <source>validators.cuisine.color.not_blank</source>
+                <target>Insert a color</target>
+            </trans-unit>
+
+            <trans-unit id="validators.cuisine.name.length">
+                <source>validators.cuisine.name.length</source>
+                <target>Insert a valid name</target>
+            </trans-unit>
+
+            <trans-unit id="validators.cuisine.name.not_blank">
+                <source>validators.cuisine.name.not_blank</source>
+                <target>Insert a name</target>
+            </trans-unit>
+
+            <!-- INVITE -->
+
+            <trans-unit id="validators.invite.channel.not_blank">
+                <source>validators.invite.channel.not_blank</source>
+                <target>Insert a channel</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.user.not_blank">
+                <source>validators.invite.user.not_blank</source>
+                <target>Insert an user</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.code.not_blank">
+                <source>validators.invite.code.not_blank</source>
+                <target>Insert a code</target>
+            </trans-unit>
+
+            <!-- MESSAGE -->
+
+            <trans-unit id="validators.invite.message.not_null">
+                <source>validators.invite.message.not_null</source>
+                <target>Insert a message content</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.title.not_null">
+                <source>validators.invite.title.not_null</source>
+                <target>Insert a title</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.title.length.min">
+                <source>validators.invite.title.length.min</source>
+                <target>The title is too short. Insert a title of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.title.length.max">
+                <source>validators.invite.title.length.max</source>
+                <target>The title is too long. Insert a title of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.content.length.min">
+                <source>validators.invite.content.length.min</source>
+                <target>The content is too short. Insert a content of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.content.length.max">
+                <source>validators.invite.content.length.max</source>
+                <target>The content is too long. Insert a content of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.category.not_null">
+                <source>validators.invite.category.not_null</source>
+                <target>Insert a category</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.category.length.min">
+                <source>validators.invite.category.length.min</source>
+                <target>The category is too short. Insert a title of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.invite.category.length.max">
+                <source>validators.invite.category.length.max</source>
+                <target>The category is too long. Insert a title of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <!-- RESTAURANT -->
+
+            <trans-unit id="validators.restaurant.cuisine.not_blank">
+                <source>validators.restaurant.cuisine.not_blank</source>
+                <target>Choose a cuisine for this restaurant</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant.name.length.min">
+                <source>validators.restaurant.name.length.min</source>
+                <target>The restaurant name is too short. Insert a name of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant.name.length.max">
+                <source>validators.restaurant.name.length.max</source>
+                <target>The restaurant name is too long. Insert a name of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant.name.not_blank">
+                <source>validators.restaurant.name.not_blank</source>
+                <target>Restaurant name is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant.address.not_blank">
+                <source>validators.restaurant.address.not_blank</source>
+                <target>Insert an address</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant.website.url">
+                <source>validators.restaurant.website.url</source>
+                <target>Insert a valid url as website (http://example.com)</target>
+            </trans-unit>
+
+            <!-- RESTAURANT ADDRESS -->
+
+            <trans-unit id="validators.restaurant.unique_entity">
+                <source>validators.restaurant.unique_entity</source>
+                <target>A restaurant with same name and coordinates already exists</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant_address.lat.not_blank">
+                <source>validators.restaurant_address.lat.not_blank</source>
+                <target>Latitude is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant_address.lng.not_blank">
+                <source>validators.restaurant_address.lng.not_blank</source>
+                <target>Longitude is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.restaurant_address.geoname.not_blank">
+                <source>validators.restaurant_address.geoname.not_blank</source>
+                <target>We can't find this city.</target>
+            </trans-unit>
+
+            <!-- REVIEW -->
+
+            <trans-unit id="validators.review.unique_entity">
+                <source>validators.review.unique_entity</source>
+                <target>There is already a review with this restaurant and user</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.comment.length.min">
+                <source>validators.review.comment.length.min</source>
+                <target>The comment is too short. Insert a comment of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.comment.length.max">
+                <source>validators.review.comment.length.max</source>
+                <target>The comment is too long. Insert a comment of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.cost.range.min">
+                <source>validators.review.cost.range.min</source>
+                <target>The minimum cost is {{ limit }}$</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.cost.range.max">
+                <source>validators.review.cost.range.max</source>
+                <target>The maximum cost is {{ limit }}$</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.restaurant.not_null">
+                <source>validators.review.restaurant.not_null</source>
+                <target>The restaurant is missing</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.geoname.not_null">
+                <source>validators.review.geoname.not_null</source>
+                <target>The city of the restaurant is missing</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.cuisine.not_null">
+                <source>validators.review.cuisine.not_null</source>
+                <target>Choose a cuisine for this review</target>
+            </trans-unit>
+
+            <trans-unit id="validators.review.user.not_null">
+                <source>validators.review.user.not_null</source>
+                <target>The user is missing for this review</target>
+            </trans-unit>
+
+            <!-- TAG -->
+            <trans-unit id="validators.tag.unique_entity">
+                <source>validators.tag.unique_entity</source>
+                <target>There is already a tag with this name</target>
+            </trans-unit>
+
+            <!-- USER -->
+
+            <trans-unit id="validators.user.email_canonical.unique_entity">
+                <source>validators.user.email_canonical.unique_entity</source>
+                <target>There is already an user with this email</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.auth_token.unique_entity">
+                <source>validators.user.auth_token.unique_entity</source>
+                <target>There is already an user with this auth token</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.refresh_token.unique_entity">
+                <source>validators.user.refresh_token.unique_entity</source>
+                <target>There is already an user with this refresh token</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.email.not_blank">
+                <source>validators.user.email.not_blank</source>
+                <target>Email is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.email.email">
+                <source>validators.user.email.email</source>
+                <target>Insert a valid email</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.email.length.min">
+                <source>validators.user.email.length.min</source>
+                <target>Email is too short. Insert an email of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.email.length.max">
+                <source>validators.user.email.length.max</source>
+                <target>Email is too long. Insert an email of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.geoname.not_null">
+                <source>validators.user.first_name.not_null</source>
+                <target>City is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.first_name.not_blank">
+                <source>validators.user.first_name.not_blank</source>
+                <target>First name is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.first_name.length.min">
+                <source>validators.user.first_name.length.min</source>
+                <target>First name is too short. Insert a first name of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.first_name.length.max">
+                <source>validators.user.first_name.length.max</source>
+                <target>First name is too long. Insert a first name of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.last_name.not_blank">
+                <source>validators.user.last_name.not_blank</source>
+                <target>Last name is required</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.last_name.length.min">
+                <source>validators.user.last_name.length.min</source>
+                <target>Last name is too short. Insert a first name of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.last_name.length.max">
+                <source>validators.user.last_name.length.max</source>
+                <target>Last name is too long. Insert a first name of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.headline.length.min">
+                <source>validators.user.headline.length.min</source>
+                <target>Headline is too short. Insert an headline of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.headline.length.max">
+                <source>validators.user.headline.length.max</source>
+                <target>Headline is too long. Insert an headline of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.about.length.min">
+                <source>validators.user.about.length.min</source>
+                <target>Your description is too short. Insert a description of at least {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.about.length.max">
+                <source>validators.user.about.length.max</source>
+                <target>Your description is too long. Insert a description of at most {{ limit }} characters</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.birth_year.range.min">
+                <source>validators.user.birth_year.range.min</source>
+                <target>Insert a valid birth year from {{ limit }}</target>
+            </trans-unit>
+
+            <trans-unit id="validators.user.birth_year.range.max">
+                <source>validators.user.birth_year.range.max</source>
+                <target>Insert a valid birth year to {{ limit }}</target>
+            </trans-unit>
+
+            <!-- Wish -->
+
+            <trans-unit id="validators.wish.unique_entity">
+                <source>validators.wish.unique_entity</source>
+                <target>There is already a wish with this restaurant and user</target>
+            </trans-unit>
+
+            <trans-unit id="validators.wish.restaurant.not_null">
+                <source>validators.wish.restaurant.not_null</source>
+                <target>The restaurant is missing</target>
+            </trans-unit>
+
+            <trans-unit id="validators.wish.geoname.not_null">
+                <source>validators.wish.geoname.not_null</source>
+                <target>The city of the restaurant is missing</target>
+            </trans-unit>
+
+            <trans-unit id="validators.wish.cuisine.not_null">
+                <source>validators.wish.cuisine.not_null</source>
+                <target>Choose a cuisine for this wish</target>
+            </trans-unit>
+
+            <trans-unit id="validators.wish.user.not_null">
+                <source>validators.wish.user.not_null</source>
+                <target>The user is missing for this wish</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

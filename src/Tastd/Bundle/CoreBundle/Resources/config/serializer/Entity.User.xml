@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\User" exclusion-policy="all" >
+        <property name="headline" expose="true" groups="RESTAURANT,MIN,BASE,CREATE,EDIT"/>
+        <property name="about" expose="true" groups="BASE,CREATE,EDIT"/>
+        <property name="avatar" expose="true" groups="RESTAURANT,MIN" />
+        <property name="firstName" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" serialized-name="firstName" />
+        <property name="lastName" expose="true" groups="RESTAURANT,MIN,CREATE,EDIT" serialized-name="lastName" />
+        <property name="fullName" expose="true" groups="RESTAURANT,MIN,BASE" serialized-name="fullName" />
+        <property name="birthYear" expose="true" groups="BASE,CREATE,EDIT" serialized-name="birthYear" />
+        <property name="followersCount" expose="true" groups="BASE" serialized-name="followersCount" />
+        <property name="leadersCount" expose="true" groups="BASE" serialized-name="leadersCount" />
+        <property name="reviewsCount" expose="true" groups="BASE" serialized-name="reviewsCount" />
+        <property name="wishesCount" expose="true" groups="BASE" serialized-name="wishesCount" />
+        <property name="score" expose="true" groups="RESTAURANT,MIN,BASE" serialized-name="score" />
+        <property name="isMyLeader" expose="true" groups="IS_MY_LEADER" serialized-name="isMyLeader" />
+        <property name="isMyFollower" expose="true" groups="IS_MY_FOLLOWER" serialized-name="isMyFollower" />
+        <property name="authToken" expose="true" groups="AUTH" serialized-name="authToken"/>
+        <property name="refreshToken" expose="true" groups="AUTH" serialized-name="refreshToken"/>
+        <property name="uploadedAvatar" expose="true" groups="EDIT" type="string" serialized-name="uploadedAvatar" />
+        <property type="Tastd\Bundle\CoreBundle\Entity\Geoname" name="geoname" expose="true" groups="MIN,EDIT,CREATE" />
+        <property type="array" expose="true" groups="AUTH" name="roles"/>
+        <property type="array&lt;Tastd\Bundle\CoreBundle\Entity\Credential&gt;" name="credentials" expose="true" groups="AUTH" />
+        <property type="array&lt;Tastd\Bundle\CoreBundle\Entity\GeoScore&gt;" name="geoScores" expose="true" groups="GEO_SCORE" />
+    </class>
+</serializer>

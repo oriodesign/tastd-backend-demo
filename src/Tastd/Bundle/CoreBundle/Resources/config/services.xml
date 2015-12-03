@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="jms_serializer.unserialize_object_constructor.class">Tastd\Bundle\CoreBundle\Serializer\ObjectConstructor</parameter>
+    </parameters>
+
+    <services>
+
+        <!-- Override Jms Object Constructor
+        http://stackoverflow.com/questions/16525849/how-to-update-symfony2-doctrine-entity-from-a-groups-inclusion-policy-jmsserial
+        Maybe there is a better way?-->
+
+        <service id="jms_serializer.object_constructor" alias="jms_serializer.doctrine_object_constructor" public="false"/>
+        <!-- Object Constructors -->
+        <service id="jms_serializer.doctrine_object_constructor" class="%jms_serializer.doctrine_object_constructor.class%" public="false">
+            <argument type="service" id="doctrine"/>
+            <argument type="service" id="jms_serializer.unserialize_object_constructor"/>
+        </service>
+
+        <!-- MAILER -->
+        <service id="tastd.mailer" class="Tastd\Bundle\CoreBundle\Mailer\Mailer">
+            <argument type="service" id="mailer" />
+            <argument type="service" id="router" />
+            <argument type="service" id="templating" />
+            <argument>%admin_sender%</argument>
+            <argument>%admin_recipient%</argument>
+        </service>
+
+        <!-- EXCEPTION WRAPPER SERIALIZE HANDLER -->
+        <service id="fos_rest.serializer.exception_wrapper_serialize_handler" class="Tastd\Bundle\CoreBundle\Exception\Serializer\ExceptionWrapperSerializeHandler">
+            <tag name="jms_serializer.subscribing_handler" />
+        </service>
+
+        <!-- BUZZ -->
+        <service id="buzz.client" class="Buzz\Client\Curl">
+            <call method="setVerifyPeer">
+                <argument>false</argument>
+            </call>
+            <call method="setTimeout">
+                <argument>10000</argument>
+            </call>
+        </service>
+
+        <!-- BUZZ BROWSER -->
+        <service id="buzz.browser" class="Buzz\Browser">
+            <argument type="service" id="buzz.client" />
+        </service>
+
+        <!-- IMAGE MANAGER -->
+        <service id="tastd.image_manager" class="Tastd\Bundle\CoreBundle\Image\ImageManager" />
+
+        <!-- TWIG EXTENSION -->
+        <service id="app.twig_extension"
+                 class="Tastd\Bundle\CoreBundle\Twig\AppExtension"
+                 public="false">
+            <call method="setCloudFrontUrl">
+                <argument>%cloudfront_url%</argument>
+            </call>
+            <tag name="twig.extension" />
+        </service>
+
+    </services>
+
+</container>

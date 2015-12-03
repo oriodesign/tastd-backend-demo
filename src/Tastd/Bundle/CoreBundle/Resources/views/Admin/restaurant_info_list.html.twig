@@ -1,0 +1,23 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field%}
+
+
+    <div>
+
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <span>Phone: {{ object.phone }}</span><br/>
+                        <span>Website: {{ object.website }}</span><br/>
+                        <span>Average cost: {{ object.averageCost }}$</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+    </div>
+{% endblock %}

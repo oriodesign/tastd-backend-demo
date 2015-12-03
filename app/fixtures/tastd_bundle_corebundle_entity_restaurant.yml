@@ -1,0 +1,71 @@
+short_name: tastd_bundle_corebundle_entity_restaurant
+class: Tastd\Bundle\CoreBundle\Entity\Restaurant
+fixtures:
+    1:
+        id: 1
+        name: Daniel
+        address: '60 East 65th Street, New York, NY 10065, United States'
+        website: null
+        phone: null
+        reviews: [1, 4]
+        created: '2015-01-27T20:38:07+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        picture: restaurant/54c7e92073c3f.jpg
+        thumb: null
+        photos: {  }
+        cuisine: chinese
+        averageCost: null
+        lat: 40.766729
+        lng: -73.967605
+        geoname: 6
+    2:
+        id: 2
+        name: 'Candle Cafe'
+        address: '1307 3rd Avenue, New York, NY 10021, United States'
+        website: null
+        phone: null
+        reviews: [2]
+        created: '2015-01-27T20:38:09+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        picture: restaurant/54c7e922b32ad.jpg
+        thumb: null
+        photos: {  }
+        cuisine: chinese
+        averageCost: null
+        lat: 40.771423
+        lng: -73.959026
+        geoname: 6
+    3:
+        id: 3
+        name: 'THE CARLYLE RESTAURANT'
+        address: '35 East 76th Street, New York, NY 10021, United States'
+        website: null
+        phone: null
+        reviews: [3]
+        created: '2015-01-27T20:38:11+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        picture: restaurant/54c7e924a50de.jpg
+        thumb: null
+        photos: {  }
+        cuisine: chinese
+        averageCost: null
+        lat: 40.774274
+        lng: -73.963003
+        geoname: 6
+    4:
+        id: 4
+        name: 'Atlantic Grill Upper East Side'
+        address: '1341 3rd Avenue, New York, NY 10021, United States'
+        website: null
+        phone: null
+        reviews: {  }
+        created: '2015-01-27T20:38:13+0100'
+        updated: '2015-07-13T14:41:42+0200'
+        picture: restaurant/54c7e92650846.jpg
+        thumb: null
+        photos: {  }
+        cuisine: chinese
+        averageCost: null
+        lat: 40.772458
+        lng: -73.958313
+        geoname: 6

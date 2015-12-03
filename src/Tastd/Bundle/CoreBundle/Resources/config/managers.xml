@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- ADDRESS MANAGER -->
+        <service id="tastd.address_manager" class="Tastd\Bundle\CoreBundle\Manager\AddressManager">
+            <argument type="service" id="tastd.geoname_repository" />
+        </service>
+
+        <!-- PUSH MESSAGE MANAGER -->
+        <service id="tastd.push_message_manager" class="Tastd\Bundle\CoreBundle\Manager\PushMessageManager">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
+
+        <!-- RESTAURANT MANAGER -->
+        <service id="tastd.restaurant_manager" class="Tastd\Bundle\CoreBundle\Manager\RestaurantManager" />
+
+        <!-- REVIEW MANAGER -->
+        <service id="tastd.review_manager" class="Tastd\Bundle\CoreBundle\Manager\ReviewManager">
+            <argument type="service" id="tastd.review_repository" />
+            <argument type="service" id="tastd.photo_repository" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
+
+        <!-- WISH MANAGER -->
+        <service id="tastd.wish_manager" class="Tastd\Bundle\CoreBundle\Manager\WishManager">
+        </service>
+
+        <!-- SCORE MANAGER -->
+        <service id="tastd.score_manager" class="Tastd\Bundle\CoreBundle\Manager\ScoreManager">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
+
+        <!-- TAG MANAGER -->
+        <service id="tastd.tag_manager" class="Tastd\Bundle\CoreBundle\Manager\TagManager">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
+
+        <!-- USER META MANAGER -->
+        <service id="tastd.user_meta_manager" class="Tastd\Bundle\CoreBundle\Manager\UserMetaManager">
+            <argument type="service" id="tastd.user_repository" />
+            <argument type="service" id="security.context" />
+        </service>
+
+        <!-- USER MANAGER -->
+        <service id="tastd.user_manager" class="Tastd\Bundle\CoreBundle\Manager\UserManager">
+            <argument type="service" id="security.encoder_factory" />
+            <argument type="service" id="fos_user.util.username_canonicalizer" />
+            <argument type="service" id="fos_user.util.email_canonicalizer" />
+            <argument type="service" id="fos_user.entity_manager" />
+            <argument>%fos_user.model.user.class%</argument>
+            <call method="setTokenGenerator">
+                <argument type="service" id="fos_user.util.token_generator" />
+            </call>
+        </service>
+
+    </services>
+</container>

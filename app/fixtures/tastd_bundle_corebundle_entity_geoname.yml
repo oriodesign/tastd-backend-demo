@@ -1,0 +1,123 @@
+short_name: tastd_bundle_corebundle_entity_geoname
+class: Tastd\Bundle\CoreBundle\Entity\Geoname
+fixtures:
+    1:
+        id: 1
+        asciiName: London
+        lat: '51.5085300'
+        lng: '-0.1257400'
+        country: GB
+        admin1: ENG
+        population: 7556900
+        timezone: Europe/London
+        modified: '2013-07-28T00:00:00+0200'
+        translations: [3, 5, 15, 16]
+        currencySymbol: £
+        currencyCode: GBP
+        reviews: {  }
+        wishes: {  }
+    2:
+        id: 2
+        asciiName: Berlin
+        lat: '52.5243700'
+        lng: '13.4105300'
+        country: DE
+        admin1: '0'
+        population: 3426354
+        timezone: Europe/Berlin
+        modified: '2012-09-19T00:00:00+0200'
+        translations: {  }
+        currencySymbol: €
+        currencyCode: EUR
+        reviews: {  }
+        wishes: {  }
+    3:
+        id: 3
+        asciiName: Paris
+        lat: '48.8534100'
+        lng: '2.3488000'
+        country: FR
+        admin1: '0'
+        population: 2138551
+        timezone: Europe/Paris
+        modified: '2013-08-02T00:00:00+0200'
+        translations: [4, 6, 17]
+        currencySymbol: €
+        currencyCode: EUR
+        reviews: {  }
+        wishes: {  }
+    4:
+        id: 4
+        asciiName: Verona
+        lat: '45.4299000'
+        lng: '10.9844400'
+        country: IT
+        admin1: Veneto
+        population: 219103
+        timezone: Europe/Rome
+        modified: '2014-04-13T00:00:00+0200'
+        translations: [7, 8]
+        currencySymbol: €
+        currencyCode: EUR
+        reviews: {  }
+        wishes: {  }
+    5:
+        id: 5
+        asciiName: Milano
+        lat: '45.4642700'
+        lng: '9.1895100'
+        country: IT
+        admin1: Lombardia
+        population: 1000000
+        timezone: Europe/Rome
+        modified: '2014-01-16T00:00:00+0100'
+        translations: {  }
+        currencySymbol: €
+        currencyCode: EUR
+        reviews: {  }
+        wishes: {  }
+    6:
+        id: 6
+        asciiName: 'New York City'
+        lat: '40.7142700'
+        lng: '-74.0059700'
+        country: US
+        admin1: NY
+        population: 8175133
+        timezone: America/New_York
+        modified: '2014-10-27T00:00:00+0100'
+        translations: [10, 11]
+        currencySymbol: $
+        currencyCode: USD
+        reviews: [1, 2, 3, 4]
+        wishes: {  }
+    7:
+        id: 7
+        asciiName: 'San Francisco'
+        lat: '37.7749300'
+        lng: '-122.4194200'
+        country: US
+        admin1: CA
+        population: 805235
+        timezone: America/Los_Angeles
+        modified: '2015-01-18T00:00:00+0100'
+        translations: {  }
+        currencySymbol: $
+        currencyCode: USD
+        reviews: {  }
+        wishes: {  }
+    8:
+        id: 8
+        asciiName: Torino
+        lat: '45.0787763'
+        lng: '7.6780715'
+        country: IT
+        admin1: Piemonte
+        population: 805235
+        timezone: Europe/Rome
+        modified: '2015-01-18T00:00:00+0100'
+        translations: [1, 9]
+        currencySymbol: €
+        currencyCode: EUR
+        reviews: {  }
+        wishes: {  }

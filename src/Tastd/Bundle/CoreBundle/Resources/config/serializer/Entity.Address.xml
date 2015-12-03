@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Entity\Address" exclusion-policy="all" >
+        <property type="integer" name="id" expose="true" groups="MIN" />
+        <property name="formattedAddress" expose="true" groups="GEOCODE,MIN,CREATE,EDIT"  serialized-name="formattedAddress"/>
+        <property type="Tastd\Bundle\CoreBundle\Entity\Geoname" name="geoname" expose="true" groups="MIN,GEOCODE,CREATE,EDIT" />
+        <property name="country" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="countryCode" serialized-name="countryCode" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="region" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="regionCode" serialized-name="regionCode" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="county" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="countyCode" serialized-name="countyCode" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="city" expose="true" groups="GEOCODE,BASE,CREATE,EDIT" />
+        <property name="streetName" expose="true" groups="GEOCODE,BASE,CREATE,EDIT"  serialized-name="streetName"/>
+        <property name="streetNumber" expose="true" groups="GEOCODE,BASE,CREATE,EDIT"  serialized-name="streetNumber"/>
+        <property name="postalCode" expose="true" groups="GEOCODE,BASE,CREATE,EDIT"  serialized-name="postalCode"/>
+        <property name="lat" expose="true" groups="GEOCODE,BASE,CREATE,EDIT"/>
+        <property name="lng" expose="true" groups="GEOCODE,BASE,CREATE,EDIT"/>
+    </class>
+</serializer>

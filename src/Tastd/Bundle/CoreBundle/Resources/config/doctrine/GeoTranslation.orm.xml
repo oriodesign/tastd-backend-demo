@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="Tastd\Bundle\CoreBundle\Entity\GeoTranslation"
+            table="geo_translations"
+            repository-class="Tastd\Bundle\CoreBundle\Repository\GeoTranslationRepository">
+
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="isoLanguage" type="string" length="7" column="iso_language" />
+        <field name="alternateName" type="string" length="200" column="alternate_name" />
+
+        <many-to-one target-entity="Tastd\Bundle\CoreBundle\Entity\Geoname" field="geoname" inversed-by="translations">
+            <join-column on-delete="CASCADE" />
+        </many-to-one>
+
+    </entity>
+
+</doctrine-mapping>

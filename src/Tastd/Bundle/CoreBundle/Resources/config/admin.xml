@@ -1,0 +1,166 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- CONNECTION -->
+        <service id="sonata.admin.connection" class="Tastd\Bundle\CoreBundle\Admin\ConnectionAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Connection" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Connection</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- CREDENTIAL -->
+        <service id="sonata.admin.credential" class="Tastd\Bundle\CoreBundle\Admin\CredentialAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Credential" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Credential</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- CUISINE -->
+        <service id="sonata.admin.cuisine" class="Tastd\Bundle\CoreBundle\Admin\CuisineAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Cuisine" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Cuisine</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- GEONAME -->
+        <service id="sonata.admin.geoname" class="Tastd\Bundle\CoreBundle\Admin\GeonameAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Geoname" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Geoname</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- GEO TRANSLATION -->
+        <service id="sonata.admin.geo_translation" class="Tastd\Bundle\CoreBundle\Admin\GeoTranslationAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Geo Translation" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\GeoTranslation</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- INVITE -->
+        <service id="sonata.admin.invite" class="Tastd\Bundle\CoreBundle\Admin\InviteAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Invite" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Invite</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- MESSAGE -->
+        <service id="sonata.admin.message" class="Tastd\Bundle\CoreBundle\Admin\MessageAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Message" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Message</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- PHOTO -->
+        <service id="sonata.admin.photo" class="Tastd\Bundle\CoreBundle\Admin\PhotoAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Photo" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Photo</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+            <call method="setCloudFrontUrl">
+                <argument>%cloudfront_url%</argument>
+            </call>
+        </service>
+
+        <!-- POST -->
+        <service id="sonata.admin.post" class="Tastd\Bundle\CoreBundle\Admin\PostAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Post" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Post</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- RESTAURANT -->
+        <service id="sonata.admin.restaurant" class="Tastd\Bundle\CoreBundle\Admin\RestaurantAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Restaurant" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Restaurant</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- REVIEW -->
+        <service id="sonata.admin.review" class="Tastd\Bundle\CoreBundle\Admin\ReviewAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Review" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Review</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+
+        <!-- TAG -->
+        <service id="sonata.admin.tag" class="Tastd\Bundle\CoreBundle\Admin\TagAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Tag" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Tag</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- USER -->
+        <service id="sonata.admin.user" class="Tastd\Bundle\CoreBundle\Admin\UserAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="User" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\User</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+        <!-- WISH -->
+        <service id="sonata.admin.wish" class="Tastd\Bundle\CoreBundle\Admin\WishAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Content" label="Wish" pager_type="simple"/>
+            <argument />
+            <argument>Tastd\Bundle\CoreBundle\Entity\Wish</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>TastdCoreBundle</argument>
+            </call>
+        </service>
+
+    </services>
+</container>

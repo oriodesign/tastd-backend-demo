@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<serializer>
+    <class name="Tastd\Bundle\CoreBundle\Google\Place\FullPlaceResult" exclusion-policy="all" >
+        <property name="streetName" expose="true" groups="MIN"/>
+        <property name="streetNumber" expose="true" groups="MIN"/>
+        <property name="formattedAddress" expose="true" groups="MIN" serialized-name="formattedAddress"/>
+        <property name="country" expose="true" groups="MIN"/>
+        <property name="latitude" expose="true" groups="MIN"/>
+        <property name="longitude" expose="true" groups="MIN"/>
+        <property name="city" expose="true" groups="MIN"/>
+        <property name="postalCode" expose="true" groups="MIN"/>
+        <property name="photos" expose="true" groups="MIN"/>
+        <property name="telephone" expose="true" groups="MIN"/>
+        <property name="website" expose="true" groups="MIN"/>
+        <property type="Tastd\Bundle\CoreBundle\Entity\Geoname" name="geoname" expose="true" groups="MIN" />
+    </class>
+</serializer>

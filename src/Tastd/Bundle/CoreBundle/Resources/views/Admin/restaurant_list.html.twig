@@ -1,0 +1,28 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field%}
+
+
+    <div>
+
+        <table>
+            <tr>
+                <td>
+                    <div style="padding: 15px;">
+                        <img style="display: block; width: 80px; height: 80px;" class="restaurant-admin-picture" src="{{ object.thumb | cloudfront }}" />
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <span style="font-weight: bold;">{{ object.name }}</span><br/>
+                        <span>{{ object.geoname.asciiName }}</span><br/>
+                        <span>{{ object.address }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+    </div>
+{% endblock %}
